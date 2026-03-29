@@ -1,0 +1,4557 @@
+{
+  "version": "2.7",
+  "children": [
+    {
+      "type": "frame",
+      "id": "7D2Mj",
+      "x": 0,
+      "y": 0,
+      "name": "RoboTech Landing Page",
+      "clip": true,
+      "width": 1920,
+      "fill": "#FFFFFF",
+      "effect": {
+        "type": "shadow",
+        "shadowType": "outer",
+        "color": "#00000040",
+        "offset": {
+          "x": 0,
+          "y": 4
+        },
+        "blur": 4
+      },
+      "layout": "vertical",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "foSuk",
+          "name": "Header",
+          "width": "fill_container",
+          "height": 80,
+          "fill": {
+            "type": "color",
+            "color": "#FFFFFF",
+            "enabled": false
+          },
+          "stroke": {
+            "thickness": {
+              "bottom": 1
+            },
+            "fill": "#0000000A"
+          },
+          "padding": [
+            0,
+            360
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "Dltcd",
+              "name": "logoArea",
+              "gap": 10,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "nEo78",
+                  "name": "logoIcon",
+                  "width": 36,
+                  "height": 36,
+                  "fill": "#0066FF",
+                  "cornerRadius": 8,
+                  "layout": "none",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "1QIfE",
+                      "x": 0,
+                      "y": 0,
+                      "name": "logoInner",
+                      "width": 16,
+                      "height": 16,
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 4,
+                      "layout": "none"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "EVclb",
+                  "name": "logoText",
+                  "fill": "#0A0F1E",
+                  "content": "NEXABOT",
+                  "fontFamily": "Outfit",
+                  "fontSize": 22,
+                  "fontWeight": "800",
+                  "letterSpacing": 2
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "yyl5t",
+              "name": "nav",
+              "gap": 40,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "6wzZ4",
+                  "name": "navHome",
+                  "fill": "#0A0F1E",
+                  "content": "首页",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "k7Tz2",
+                  "name": "navProducts",
+                  "fill": "#5A6B7F",
+                  "content": "产品",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "8yU1g",
+                  "name": "navAbout",
+                  "fill": "#5A6B7F",
+                  "content": "关于我们",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "xjH07",
+                  "name": "navTech",
+                  "fill": "#5A6B7F",
+                  "content": "技术",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "46z6d",
+                  "name": "navContact",
+                  "fill": "#5A6B7F",
+                  "content": "联系",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "KAI0s",
+              "name": "ctaBtn",
+              "fill": "#0066FF",
+              "cornerRadius": 24,
+              "padding": [
+                12,
+                28
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Ymsop",
+                  "name": "ctaText",
+                  "fill": "#FFFFFF",
+                  "content": "立即咨询",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "AR15j",
+          "name": "Hero Section",
+          "width": "fill_container",
+          "height": 720,
+          "fill": {
+            "type": "gradient",
+            "gradientType": "linear",
+            "enabled": true,
+            "rotation": 135,
+            "size": {
+              "height": 1
+            },
+            "colors": [
+              {
+                "color": "#FFFFFF",
+                "position": 0
+              },
+              {
+                "color": "#F0F4FF",
+                "position": 0.6
+              },
+              {
+                "color": "#E8F0FE",
+                "position": 1
+              }
+            ]
+          },
+          "padding": [
+            0,
+            360
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "XS3BF",
+              "name": "Hero Left",
+              "width": "fill_container",
+              "height": "fill_container",
+              "layout": "vertical",
+              "gap": 32,
+              "justifyContent": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "kjqRf",
+                  "name": "heroBadge",
+                  "fill": "#0066FF12",
+                  "cornerRadius": 20,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#0066FF30"
+                  },
+                  "gap": 8,
+                  "padding": [
+                    8,
+                    20
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "ellipse",
+                      "id": "c2kqm",
+                      "name": "heroBadgeDot",
+                      "fill": "#0066FF",
+                      "width": 8,
+                      "height": 8
+                    },
+                    {
+                      "type": "text",
+                      "id": "QGrsb",
+                      "name": "heroBadgeText",
+                      "fill": "#0066FF",
+                      "content": "新一代智能机器人 · 2026",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "uNgWR",
+                  "name": "Frame 1",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": [
+                    10,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "734cE",
+                      "name": "heroTitle",
+                      "fill": "#0A0F1E",
+                      "content": "重新定义\n人机交互的",
+                      "lineHeight": 1.2,
+                      "fontFamily": "Outfit",
+                      "fontSize": 56,
+                      "fontWeight": "900",
+                      "letterSpacing": -2
+                    },
+                    {
+                      "type": "text",
+                      "id": "2Z40H",
+                      "name": "futureText",
+                      "fill": {
+                        "type": "gradient",
+                        "gradientType": "linear",
+                        "enabled": true,
+                        "rotation": 0,
+                        "size": {
+                          "height": 1
+                        },
+                        "colors": [
+                          {
+                            "color": "#0066FF",
+                            "position": 0
+                          },
+                          {
+                            "color": "#00C2FF",
+                            "position": 0.5
+                          },
+                          {
+                            "color": "#60A5FA",
+                            "position": 1
+                          }
+                        ]
+                      },
+                      "content": "未来",
+                      "lineHeight": 1,
+                      "fontFamily": "Outfit",
+                      "fontSize": 56,
+                      "fontWeight": "900",
+                      "letterSpacing": -2
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "SXh3d",
+                  "name": "heroSub",
+                  "fill": "#5A6B7F",
+                  "textGrowth": "fixed-width",
+                  "width": 480,
+                  "content": "NEXABOT 致力于打造最前沿的人工智能机器人，\n将科技与生活无缝融合，开启智能新纪元。",
+                  "lineHeight": 1.7,
+                  "fontFamily": "Inter",
+                  "fontSize": 18
+                },
+                {
+                  "type": "frame",
+                  "id": "GIYTw",
+                  "name": "heroBtns",
+                  "gap": 16,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "kAQnf",
+                      "name": "heroBtn1",
+                      "fill": "#0066FF",
+                      "cornerRadius": 32,
+                      "gap": 10,
+                      "padding": [
+                        18,
+                        40
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "nKmwC",
+                          "name": "heroBtn1Text",
+                          "fill": "#FFFFFF",
+                          "content": "探索产品",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "icon_font",
+                          "id": "49gtx",
+                          "name": "heroBtn1Arrow",
+                          "width": 20,
+                          "height": 20,
+                          "iconFontName": "arrow-right",
+                          "iconFontFamily": "lucide",
+                          "fill": "#FFFFFF"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "c53K7",
+                      "name": "heroBtn2",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 32,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D0D5DD"
+                      },
+                      "gap": 10,
+                      "padding": [
+                        18,
+                        40
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "FnLIk",
+                          "name": "heroBtn2Text",
+                          "fill": "#0A0F1E",
+                          "content": "了解更多",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "lvMZ9",
+              "name": "Hero Right",
+              "width": 560,
+              "height": 600,
+              "cornerRadius": 24,
+              "layout": "none",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "cpNt3",
+                  "x": 0,
+                  "y": 0,
+                  "name": "Robot Image",
+                  "width": 560,
+                  "height": 600,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1770710471264.png",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": 24
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "KVcbv",
+          "name": "Features Strip",
+          "width": "fill_container",
+          "fill": "#0A0F1E",
+          "gap": 40,
+          "padding": [
+            60,
+            360
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "8Unao",
+              "name": "feat1",
+              "width": "fill_container",
+              "height": 280,
+              "layout": "none",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "tanf4",
+                  "x": 0,
+                  "y": 0,
+                  "name": "feat1Num",
+                  "fill": {
+                    "type": "gradient",
+                    "gradientType": "linear",
+                    "enabled": true,
+                    "rotation": 180,
+                    "size": {
+                      "height": 1
+                    },
+                    "colors": [
+                      {
+                        "color": "#0066FF29",
+                        "position": 0
+                      },
+                      {
+                        "color": "#0066FF00",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  "textGrowth": "fixed-width-height",
+                  "width": 346,
+                  "height": 280,
+                  "content": "01",
+                  "lineHeight": 1,
+                  "textAlign": "center",
+                  "fontFamily": "Outfit",
+                  "fontSize": 200,
+                  "fontWeight": "900",
+                  "letterSpacing": -8
+                },
+                {
+                  "type": "frame",
+                  "id": "wjUkF",
+                  "x": 0,
+                  "y": 0,
+                  "name": "Content 1",
+                  "width": 346,
+                  "height": 280,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": [
+                    20,
+                    28
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "B6ydy",
+                      "name": "3D Icon 1",
+                      "width": 64,
+                      "height": 64,
+                      "fill": {
+                        "type": "gradient",
+                        "gradientType": "linear",
+                        "enabled": true,
+                        "rotation": 180,
+                        "size": {
+                          "height": 1
+                        },
+                        "colors": [
+                          {
+                            "color": "#4D9AFF",
+                            "position": 0
+                          },
+                          {
+                            "color": "#0044DD",
+                            "position": 1
+                          }
+                        ]
+                      },
+                      "cornerRadius": 18,
+                      "effect": [
+                        {
+                          "type": "shadow",
+                          "shadowType": "outer",
+                          "color": "#0066FF50",
+                          "offset": {
+                            "x": 0,
+                            "y": 10
+                          },
+                          "blur": 24,
+                          "spread": -2
+                        },
+                        {
+                          "type": "shadow",
+                          "shadowType": "outer",
+                          "color": "#0066FF30",
+                          "offset": {
+                            "x": 0,
+                            "y": 2
+                          },
+                          "blur": 4
+                        }
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "VmkjE",
+                          "name": "feat1Icon",
+                          "width": 28,
+                          "height": 28,
+                          "iconFontName": "cpu",
+                          "iconFontFamily": "lucide",
+                          "fill": "#FFFFFF"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "ToTkd",
+                      "name": "feat1Title",
+                      "fill": "#FFFFFF",
+                      "content": "前沿科技",
+                      "textAlign": "center",
+                      "fontFamily": "Outfit",
+                      "fontSize": 22,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Hn41Q",
+                      "name": "feat1Desc",
+                      "fill": "#8A94A6",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "搭载自研 NX-7 神经网络芯片，\n实时处理多模态感知数据",
+                      "lineHeight": 1.6,
+                      "textAlign": "center",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "8j7qR",
+              "name": "divider1",
+              "width": 1,
+              "height": 120,
+              "fill": "#FFFFFF15"
+            },
+            {
+              "type": "frame",
+              "id": "Q3eqG",
+              "name": "feat2",
+              "width": "fill_container",
+              "height": 280,
+              "layout": "none",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "HTacP",
+                  "x": 0,
+                  "y": 0,
+                  "name": "feat2Num",
+                  "fill": {
+                    "type": "gradient",
+                    "gradientType": "linear",
+                    "enabled": true,
+                    "rotation": 180,
+                    "size": {
+                      "height": 1
+                    },
+                    "colors": [
+                      {
+                        "color": "#0066FF29",
+                        "position": 0
+                      },
+                      {
+                        "color": "#0066FF00",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  "textGrowth": "fixed-width-height",
+                  "width": 346,
+                  "height": 280,
+                  "content": "02",
+                  "lineHeight": 1,
+                  "textAlign": "center",
+                  "fontFamily": "Outfit",
+                  "fontSize": 200,
+                  "fontWeight": "900",
+                  "letterSpacing": -8
+                },
+                {
+                  "type": "frame",
+                  "id": "j9Iwr",
+                  "x": 0,
+                  "y": 0,
+                  "name": "Content 2",
+                  "width": 346,
+                  "height": 280,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": [
+                    20,
+                    28
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "ztK3f",
+                      "name": "3D Icon 2",
+                      "width": 64,
+                      "height": 64,
+                      "fill": {
+                        "type": "gradient",
+                        "gradientType": "linear",
+                        "enabled": true,
+                        "rotation": 180,
+                        "size": {
+                          "height": 1
+                        },
+                        "colors": [
+                          {
+                            "color": "#4D9AFF",
+                            "position": 0
+                          },
+                          {
+                            "color": "#0044DD",
+                            "position": 1
+                          }
+                        ]
+                      },
+                      "cornerRadius": 18,
+                      "effect": [
+                        {
+                          "type": "shadow",
+                          "shadowType": "outer",
+                          "color": "#0066FF50",
+                          "offset": {
+                            "x": 0,
+                            "y": 10
+                          },
+                          "blur": 24,
+                          "spread": -2
+                        },
+                        {
+                          "type": "shadow",
+                          "shadowType": "outer",
+                          "color": "#0066FF30",
+                          "offset": {
+                            "x": 0,
+                            "y": 2
+                          },
+                          "blur": 4
+                        }
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "9cybm",
+                          "name": "feat2Icon",
+                          "width": 28,
+                          "height": 28,
+                          "iconFontName": "sparkles",
+                          "iconFontFamily": "lucide",
+                          "fill": "#FFFFFF"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "xH2Xx",
+                      "name": "feat2Title",
+                      "fill": "#FFFFFF",
+                      "content": "智能未来",
+                      "textAlign": "center",
+                      "fontFamily": "Outfit",
+                      "fontSize": 22,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "7NhjA",
+                      "name": "feat2Desc",
+                      "fill": "#8A94A6",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "深度学习自适应算法，\n让机器人真正理解人类意图",
+                      "lineHeight": 1.6,
+                      "textAlign": "center",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Rb1Cq",
+              "name": "divider2",
+              "width": 1,
+              "height": 120,
+              "fill": "#FFFFFF15"
+            },
+            {
+              "type": "frame",
+              "id": "vrloL",
+              "name": "feat3",
+              "width": "fill_container",
+              "height": 280,
+              "layout": "none",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Cr3Tq",
+                  "x": 0,
+                  "y": 0,
+                  "name": "feat3Num",
+                  "fill": {
+                    "type": "gradient",
+                    "gradientType": "linear",
+                    "enabled": true,
+                    "rotation": 180,
+                    "size": {
+                      "height": 1
+                    },
+                    "colors": [
+                      {
+                        "color": "#0066FF29",
+                        "position": 0
+                      },
+                      {
+                        "color": "#0066FF00",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  "textGrowth": "fixed-width-height",
+                  "width": 346,
+                  "height": 280,
+                  "content": "03",
+                  "lineHeight": 1,
+                  "textAlign": "center",
+                  "fontFamily": "Outfit",
+                  "fontSize": 200,
+                  "fontWeight": "900",
+                  "letterSpacing": -8
+                },
+                {
+                  "type": "frame",
+                  "id": "X7eDR",
+                  "x": 0,
+                  "y": 0,
+                  "name": "Content 3",
+                  "width": 346,
+                  "height": 280,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": [
+                    20,
+                    28
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "twOne",
+                      "name": "3D Icon 3",
+                      "width": 64,
+                      "height": 64,
+                      "fill": {
+                        "type": "gradient",
+                        "gradientType": "linear",
+                        "enabled": true,
+                        "rotation": 180,
+                        "size": {
+                          "height": 1
+                        },
+                        "colors": [
+                          {
+                            "color": "#4D9AFF",
+                            "position": 0
+                          },
+                          {
+                            "color": "#0044DD",
+                            "position": 1
+                          }
+                        ]
+                      },
+                      "cornerRadius": 18,
+                      "effect": [
+                        {
+                          "type": "shadow",
+                          "shadowType": "outer",
+                          "color": "#0066FF50",
+                          "offset": {
+                            "x": 0,
+                            "y": 10
+                          },
+                          "blur": 24,
+                          "spread": -2
+                        },
+                        {
+                          "type": "shadow",
+                          "shadowType": "outer",
+                          "color": "#0066FF30",
+                          "offset": {
+                            "x": 0,
+                            "y": 2
+                          },
+                          "blur": 4
+                        }
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "76nDt",
+                          "name": "feat3Icon",
+                          "width": 28,
+                          "height": 28,
+                          "iconFontName": "shield-check",
+                          "iconFontFamily": "lucide",
+                          "fill": "#FFFFFF"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "XpykD",
+                      "name": "feat3Title",
+                      "fill": "#FFFFFF",
+                      "content": "安全可靠",
+                      "textAlign": "center",
+                      "fontFamily": "Outfit",
+                      "fontSize": 22,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "DfLla",
+                      "name": "feat3Desc",
+                      "fill": "#8A94A6",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "三重安全认证体系，\n通过国际 ISO 9001 标准检测",
+                      "lineHeight": 1.6,
+                      "textAlign": "center",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "FNH3Y",
+          "name": "Products Section",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "layout": "vertical",
+          "gap": 60,
+          "padding": [
+            100,
+            360
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "zGjnY",
+              "name": "prodHeader",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "end",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "YFdhq",
+                  "name": "prodHeaderLeft",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "vNIXU",
+                      "name": "prodLabel",
+                      "fill": "#0066FF",
+                      "content": "PRODUCTS",
+                      "fontFamily": "Outfit",
+                      "fontSize": 13,
+                      "fontWeight": "600",
+                      "letterSpacing": 4
+                    },
+                    {
+                      "type": "text",
+                      "id": "2Kh1e",
+                      "name": "prodTitle",
+                      "fill": "#0A0F1E",
+                      "content": "在售机器人",
+                      "fontFamily": "Outfit",
+                      "fontSize": 48,
+                      "fontWeight": "800",
+                      "letterSpacing": -1
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "pkTgA",
+                  "name": "prodSeeAll",
+                  "gap": 8,
+                  "padding": [
+                    12,
+                    0
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "71wjN",
+                      "name": "prodSeeAllText",
+                      "fill": "#0066FF",
+                      "content": "查看全部",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "icon_font",
+                      "id": "zq7F7",
+                      "name": "prodSeeAllArrow",
+                      "width": 18,
+                      "height": 18,
+                      "iconFontName": "arrow-right",
+                      "iconFontFamily": "lucide",
+                      "fill": "#0066FF"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "dgmiL",
+              "name": "Product Grid",
+              "width": "fill_container",
+              "height": 640,
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "tknRw",
+                  "name": "Grid Left - Featured",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#F5F7FA",
+                  "cornerRadius": 20,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "DQxAr",
+                      "name": "gridLeftImg",
+                      "width": "fill_container",
+                      "height": "fill_container",
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/generated-1770710499171.png",
+                        "mode": "fill"
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "aIZn7",
+                      "name": "gridLeftInfo",
+                      "width": "fill_container",
+                      "fill": "#F5F7FA",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "padding": [
+                        28,
+                        32
+                      ],
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "hIZmZ",
+                          "name": "gridLeftTag",
+                          "fill": "#0066FF10",
+                          "cornerRadius": 12,
+                          "padding": [
+                            6,
+                            14
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "RehWX",
+                              "name": "gridLeftTagText",
+                              "fill": "#0066FF",
+                              "content": "热销",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "aQBnP",
+                          "name": "gridLeftName",
+                          "fill": "#0A0F1E",
+                          "content": "NX-One 家庭服务机器人",
+                          "fontFamily": "Outfit",
+                          "fontSize": 24,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "gPEVn",
+                          "name": "gridLeftDesc",
+                          "fill": "#5A6B7F",
+                          "content": "全屋智能管家，语音交互 · 自主导航 · 情感陪伴",
+                          "fontFamily": "Inter",
+                          "fontSize": 14
+                        },
+                        {
+                          "type": "frame",
+                          "id": "u7dJE",
+                          "name": "gridLeftPrice",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "i7CY7",
+                              "name": "gridLeftPriceText",
+                              "fill": "#0A0F1E",
+                              "content": "¥ 29,800",
+                              "fontFamily": "Outfit",
+                              "fontSize": 28,
+                              "fontWeight": "800"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "UA3wB",
+                              "name": "gridLeftBtn",
+                              "fill": "#0066FF",
+                              "cornerRadius": 20,
+                              "gap": 6,
+                              "padding": [
+                                10,
+                                24
+                              ],
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "GJnwk",
+                                  "name": "gridLeftBtnText",
+                                  "fill": "#FFFFFF",
+                                  "content": "立即购买",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 13,
+                                  "fontWeight": "600"
+                                },
+                                {
+                                  "type": "icon_font",
+                                  "id": "jGqGc",
+                                  "name": "gridLeftBtnArrow",
+                                  "width": 16,
+                                  "height": 16,
+                                  "iconFontName": "shopping-cart",
+                                  "iconFontFamily": "lucide",
+                                  "fill": "#FFFFFF"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "AdfwY",
+                  "name": "Grid Right",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "layout": "vertical",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "ZN6Qe",
+                      "name": "Product Card 2",
+                      "clip": true,
+                      "width": "fill_container",
+                      "height": "fill_container",
+                      "fill": "#F5F7FA",
+                      "cornerRadius": 20,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "dC9cG",
+                          "name": "card2Img",
+                          "width": 240,
+                          "height": "fill_container",
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "./images/generated-1770713276274.png",
+                            "mode": "fill"
+                          }
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Ue8Pk",
+                          "name": "card2Info",
+                          "width": "fill_container",
+                          "height": "fill_container",
+                          "layout": "vertical",
+                          "gap": 10,
+                          "padding": 24,
+                          "justifyContent": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "oWqpJ",
+                              "name": "card2Tag",
+                              "fill": "#10B98110",
+                              "cornerRadius": 10,
+                              "padding": [
+                                5,
+                                12
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "aIcIc",
+                                  "name": "card2TagText",
+                                  "fill": "#10B981",
+                                  "content": "教育",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 11,
+                                  "fontWeight": "600"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "qbV4U",
+                              "name": "card2Name",
+                              "fill": "#0A0F1E",
+                              "content": "NX-Edu 教育机器人",
+                              "fontFamily": "Outfit",
+                              "fontSize": 20,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "mvoXY",
+                              "name": "card2Desc",
+                              "fill": "#5A6B7F",
+                              "content": "AI 编程启蒙 · 互动式教学",
+                              "fontFamily": "Inter",
+                              "fontSize": 13
+                            },
+                            {
+                              "type": "text",
+                              "id": "dhV11",
+                              "name": "card2Price",
+                              "fill": "#0A0F1E",
+                              "content": "¥ 12,800",
+                              "fontFamily": "Outfit",
+                              "fontSize": 22,
+                              "fontWeight": "800"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "UYuf6",
+                      "name": "Product Card 3",
+                      "clip": true,
+                      "width": "fill_container",
+                      "height": "fill_container",
+                      "fill": "#0A0F1E",
+                      "cornerRadius": 20,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "01oaV",
+                          "name": "card3Img",
+                          "width": 240,
+                          "height": "fill_container",
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "./images/generated-1770710521042.png",
+                            "mode": "fill"
+                          }
+                        },
+                        {
+                          "type": "frame",
+                          "id": "2KHSW",
+                          "name": "card3Info",
+                          "width": "fill_container",
+                          "height": "fill_container",
+                          "layout": "vertical",
+                          "gap": 10,
+                          "padding": 24,
+                          "justifyContent": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "cmHmI",
+                              "name": "card3Tag",
+                              "fill": "#0066FF20",
+                              "cornerRadius": 10,
+                              "padding": [
+                                5,
+                                12
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "qc6Qk",
+                                  "name": "card3TagText",
+                                  "fill": "#60A5FA",
+                                  "content": "工业",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 11,
+                                  "fontWeight": "600"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "hW81h",
+                              "name": "card3Name",
+                              "fill": "#FFFFFF",
+                              "content": "NX-Pro 工业协作机器人",
+                              "fontFamily": "Outfit",
+                              "fontSize": 20,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "15sYV",
+                              "name": "card3Desc",
+                              "fill": "#8A94A6",
+                              "content": "精密操控 · 人机协作 · 7轴联动",
+                              "fontFamily": "Inter",
+                              "fontSize": 13
+                            },
+                            {
+                              "type": "text",
+                              "id": "9Aj23",
+                              "name": "card3Price",
+                              "fill": "#FFFFFF",
+                              "content": "¥ 168,000",
+                              "fontFamily": "Outfit",
+                              "fontSize": 22,
+                              "fontWeight": "800"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "8yDfs",
+              "name": "Product Row 2",
+              "width": "fill_container",
+              "height": 380,
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "524fn",
+                  "name": "Product Card 4",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#F5F7FA",
+                  "cornerRadius": 20,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "F4pAM",
+                      "name": "card4Img",
+                      "width": "fill_container",
+                      "height": "fill_container",
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/generated-1770710535046.png",
+                        "mode": "fill"
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "NAOT6",
+                      "name": "card4Info",
+                      "width": "fill_container",
+                      "fill": "#F5F7FA",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": [
+                        20,
+                        24
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "DnjeE",
+                          "name": "card4Name",
+                          "fill": "#0A0F1E",
+                          "content": "NX-Buddy 陪伴机器人",
+                          "fontFamily": "Outfit",
+                          "fontSize": 18,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "c27NN",
+                          "name": "card4Price",
+                          "fill": "#0A0F1E",
+                          "content": "¥ 6,800",
+                          "fontFamily": "Outfit",
+                          "fontSize": 18,
+                          "fontWeight": "800"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "iiU1A",
+                  "name": "Product Card 5",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#F5F7FA",
+                  "cornerRadius": 20,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "C6mak",
+                      "name": "card5Img",
+                      "width": "fill_container",
+                      "height": "fill_container",
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/generated-1770710542867.png",
+                        "mode": "fill"
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "jgzbq",
+                      "name": "card5Info",
+                      "width": "fill_container",
+                      "fill": "#F5F7FA",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": [
+                        20,
+                        24
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "1o3Wl",
+                          "name": "card5Name",
+                          "fill": "#0A0F1E",
+                          "content": "NX-Med 医疗辅助机器人",
+                          "fontFamily": "Outfit",
+                          "fontSize": 18,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "ihUOt",
+                          "name": "card5Price",
+                          "fill": "#0A0F1E",
+                          "content": "¥ 89,000",
+                          "fontFamily": "Outfit",
+                          "fontSize": 18,
+                          "fontWeight": "800"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "zFsxz",
+                  "name": "Product Card 6",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#F5F7FA",
+                  "cornerRadius": 20,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "fm7F1",
+                      "name": "card6Img",
+                      "width": "fill_container",
+                      "height": "fill_container",
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/generated-1770710551079.png",
+                        "mode": "fill"
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "gmAuI",
+                      "name": "card6Info",
+                      "width": "fill_container",
+                      "fill": "#F5F7FA",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": [
+                        20,
+                        24
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "3kU92",
+                          "name": "card6Name",
+                          "fill": "#0A0F1E",
+                          "content": "NX-Guard 安防巡逻机器人",
+                          "fontFamily": "Outfit",
+                          "fontSize": 18,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "qvTdw",
+                          "name": "card6Price",
+                          "fill": "#0A0F1E",
+                          "content": "¥ 45,000",
+                          "fontFamily": "Outfit",
+                          "fontSize": 18,
+                          "fontWeight": "800"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "7m091",
+          "name": "Stats Bar",
+          "width": 1200,
+          "fill": "#F5F7FA",
+          "cornerRadius": 20,
+          "padding": 60,
+          "justifyContent": "space_around",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "o5hSU",
+              "name": "stat1",
+              "layout": "vertical",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "UoQZN",
+                  "name": "stat1Val",
+                  "fill": "#0066FF",
+                  "content": "50+",
+                  "fontFamily": "Outfit",
+                  "fontSize": 52,
+                  "fontWeight": "900",
+                  "letterSpacing": -2
+                },
+                {
+                  "type": "text",
+                  "id": "0eR10",
+                  "name": "stat1Label",
+                  "fill": "#5A6B7F",
+                  "content": "全球合作伙伴",
+                  "fontFamily": "Inter",
+                  "fontSize": 14
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "bk0JI",
+              "name": "statDiv1",
+              "width": 1,
+              "height": 60,
+              "fill": "#D0D5DD"
+            },
+            {
+              "type": "frame",
+              "id": "QfpsM",
+              "name": "stat2",
+              "layout": "vertical",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "QedOP",
+                  "name": "stat2Val",
+                  "fill": "#0066FF",
+                  "content": "10万+",
+                  "fontFamily": "Outfit",
+                  "fontSize": 52,
+                  "fontWeight": "900",
+                  "letterSpacing": -2
+                },
+                {
+                  "type": "text",
+                  "id": "6S9Z5",
+                  "name": "stat2Label",
+                  "fill": "#5A6B7F",
+                  "content": "用户选择",
+                  "fontFamily": "Inter",
+                  "fontSize": 14
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "r1hNk",
+              "name": "statDiv2",
+              "width": 1,
+              "height": 60,
+              "fill": "#D0D5DD"
+            },
+            {
+              "type": "frame",
+              "id": "Hvi1v",
+              "name": "stat3",
+              "layout": "vertical",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "3bexa",
+                  "name": "stat3Val",
+                  "fill": "#0066FF",
+                  "content": "200+",
+                  "fontFamily": "Outfit",
+                  "fontSize": 52,
+                  "fontWeight": "900",
+                  "letterSpacing": -2
+                },
+                {
+                  "type": "text",
+                  "id": "D6uHY",
+                  "name": "stat3Label",
+                  "fill": "#5A6B7F",
+                  "content": "技术专利",
+                  "fontFamily": "Inter",
+                  "fontSize": 14
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "xIL5u",
+              "name": "statDiv3",
+              "width": 1,
+              "height": 60,
+              "fill": "#D0D5DD"
+            },
+            {
+              "type": "frame",
+              "id": "e18TX",
+              "name": "stat4",
+              "layout": "vertical",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "RmtJD",
+                  "name": "stat4Val",
+                  "fill": "#0066FF",
+                  "content": "99.8%",
+                  "fontFamily": "Outfit",
+                  "fontSize": 52,
+                  "fontWeight": "900",
+                  "letterSpacing": -2
+                },
+                {
+                  "type": "text",
+                  "id": "fgPos",
+                  "name": "stat4Label",
+                  "fill": "#5A6B7F",
+                  "content": "客户满意度",
+                  "fontFamily": "Inter",
+                  "fontSize": 14
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "SHptN",
+          "name": "About Section",
+          "width": "fill_container",
+          "height": 600,
+          "fill": "#FFFFFF",
+          "gap": 80,
+          "padding": [
+            80,
+            360
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "OWAdC",
+              "name": "aboutLeft",
+              "width": "fill_container",
+              "height": "fill_container",
+              "layout": "vertical",
+              "gap": 32,
+              "justifyContent": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "7zvkA",
+                  "name": "aboutLabel",
+                  "fill": "#0066FF",
+                  "content": "ABOUT NEXABOT",
+                  "fontFamily": "Outfit",
+                  "fontSize": 13,
+                  "fontWeight": "600",
+                  "letterSpacing": 4
+                },
+                {
+                  "type": "text",
+                  "id": "VESTR",
+                  "name": "aboutTitle",
+                  "fill": "#0A0F1E",
+                  "content": "让智能不再遥远\n让未来触手可及",
+                  "lineHeight": 1.2,
+                  "fontFamily": "Outfit",
+                  "fontSize": 42,
+                  "fontWeight": "800",
+                  "letterSpacing": -1
+                },
+                {
+                  "type": "text",
+                  "id": "D11iJ",
+                  "name": "aboutDesc",
+                  "fill": "#5A6B7F",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "NEXABOT 成立于 2020 年，是全球领先的人工智能机器人研发与制造企业。我们汇聚了来自麻省理工、斯坦福、清华等顶尖院校的 AI 研究人才，致力于将最前沿的人工智能技术转化为改变生活的产品。",
+                  "lineHeight": 1.8,
+                  "fontFamily": "Inter",
+                  "fontSize": 16
+                },
+                {
+                  "type": "text",
+                  "id": "5jrUl",
+                  "name": "aboutDesc2",
+                  "fill": "#5A6B7F",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "从家庭到工业，从教育到医疗，我们的机器人产品线覆盖多个领域，服务全球超过 30 个国家和地区的用户。",
+                  "lineHeight": 1.8,
+                  "fontFamily": "Inter",
+                  "fontSize": 16
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "uMtaQ",
+              "name": "About Right",
+              "clip": true,
+              "width": 520,
+              "height": "fill_container",
+              "cornerRadius": 20,
+              "layout": "none",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "5BTMN",
+                  "x": 0,
+                  "y": 0,
+                  "name": "aboutImg",
+                  "width": 520,
+                  "height": 440,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1770710573904.png",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": 20
+                },
+                {
+                  "type": "frame",
+                  "id": "LcVhj",
+                  "x": 0,
+                  "y": 276,
+                  "name": "aboutQuote",
+                  "width": 520,
+                  "fill": {
+                    "type": "gradient",
+                    "gradientType": "linear",
+                    "enabled": true,
+                    "rotation": 180,
+                    "size": {
+                      "height": 1
+                    },
+                    "colors": [
+                      {
+                        "color": "#00000000",
+                        "position": 0
+                      },
+                      {
+                        "color": "#000000CC",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  "cornerRadius": [
+                    0,
+                    0,
+                    20,
+                    20
+                  ],
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": [
+                    28,
+                    32,
+                    24,
+                    32
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ePNgc",
+                      "name": "aboutQuoteIcon",
+                      "fill": "#FFFFFF40",
+                      "content": "\"",
+                      "lineHeight": 0.6,
+                      "fontFamily": "Outfit",
+                      "fontSize": 48,
+                      "fontWeight": "900"
+                    },
+                    {
+                      "type": "text",
+                      "id": "aCKrM",
+                      "name": "aboutQuoteText",
+                      "fill": "#FFFFFF",
+                      "content": "我们相信，最好的技术\n应该是无形的。",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "oVmnT",
+                      "name": "aboutQuoteAuthor",
+                      "fill": "#FFFFFFAA",
+                      "content": "— 张明远，NEXABOT CEO",
+                      "fontFamily": "Inter",
+                      "fontSize": 12
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Vkyab",
+          "name": "CTA Section",
+          "width": "fill_container",
+          "height": 600,
+          "fill": {
+            "type": "gradient",
+            "gradientType": "linear",
+            "enabled": true,
+            "rotation": 180,
+            "size": {
+              "height": 1
+            },
+            "colors": [
+              {
+                "color": "#0A0F1E",
+                "position": 0
+              },
+              {
+                "color": "#0D1B3E",
+                "position": 1
+              }
+            ]
+          },
+          "layout": "none",
+          "children": [
+            {
+              "type": "frame",
+              "id": "0bHul",
+              "x": 360,
+              "y": 100,
+              "name": "Earth Clip",
+              "opacity": 0.24,
+              "clip": true,
+              "width": 1200,
+              "height": 500,
+              "layout": "none"
+            },
+            {
+              "type": "frame",
+              "id": "ED9uv",
+              "x": 0,
+              "y": 0,
+              "name": "CTA Content",
+              "width": 1920,
+              "height": 600,
+              "layout": "vertical",
+              "gap": 40,
+              "padding": [
+                100,
+                360
+              ],
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "VMALs",
+                  "name": "ctaDecoLine",
+                  "width": 60,
+                  "height": 3,
+                  "fill": "#0066FF",
+                  "cornerRadius": 2
+                },
+                {
+                  "type": "text",
+                  "id": "ScrX0",
+                  "name": "ctaTitle",
+                  "fill": "#FFFFFF",
+                  "content": "准备好迎接智能新时代了吗？",
+                  "textAlign": "center",
+                  "fontFamily": "Outfit",
+                  "fontSize": 48,
+                  "fontWeight": "800",
+                  "letterSpacing": -1
+                },
+                {
+                  "type": "text",
+                  "id": "d6Blg",
+                  "name": "ctaSub",
+                  "fill": "#8A94A6",
+                  "content": "立即联系我们，获取专属定制方案与产品咨询",
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 18
+                },
+                {
+                  "type": "frame",
+                  "id": "8BKfr",
+                  "name": "ctaBtns",
+                  "gap": 20,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Z9qRD",
+                      "name": "ctaBtn1",
+                      "fill": "#0066FF",
+                      "cornerRadius": 32,
+                      "gap": 10,
+                      "padding": [
+                        20,
+                        48
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "jZAfH",
+                          "name": "ctaBtn1Text",
+                          "fill": "#FFFFFF",
+                          "content": "预约演示",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "icon_font",
+                          "id": "PAZE3",
+                          "name": "ctaBtn1Icon",
+                          "width": 20,
+                          "height": 20,
+                          "iconFontName": "calendar",
+                          "iconFontFamily": "lucide",
+                          "fill": "#FFFFFF"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "HUuKy",
+                      "name": "ctaBtn2",
+                      "cornerRadius": 32,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#FFFFFF30"
+                      },
+                      "gap": 10,
+                      "padding": [
+                        20,
+                        48
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Qr1Dj",
+                          "name": "ctaBtn2Text",
+                          "fill": "#FFFFFF",
+                          "content": "下载产品手册",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "icon_font",
+                          "id": "bLlY1",
+                          "name": "ctaBtn2Icon",
+                          "width": 20,
+                          "height": 20,
+                          "iconFontName": "download",
+                          "iconFontFamily": "lucide",
+                          "fill": "#FFFFFF"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "M4HLe",
+                  "name": "ctaTrust",
+                  "fill": "#5A6B7F",
+                  "content": "已有 10,000+ 企业选择 NEXABOT  ·  30天无理由退款  ·  终身技术支持",
+                  "fontFamily": "Inter",
+                  "fontSize": 13
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "jTpBT",
+          "name": "Footer",
+          "width": "fill_container",
+          "fill": "#0A0F1E",
+          "layout": "vertical",
+          "gap": 48,
+          "padding": [
+            60,
+            360,
+            40,
+            360
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "jvr3F",
+              "name": "footerTop",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "oYv5C",
+                  "name": "footerBrand",
+                  "width": 320,
+                  "layout": "vertical",
+                  "gap": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "vIMsI",
+                      "name": "footerLogoRow",
+                      "gap": 10,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "ZzX6l",
+                          "name": "footerLogoIcon",
+                          "width": 32,
+                          "height": 32,
+                          "fill": "#0066FF",
+                          "cornerRadius": 8,
+                          "layout": "none",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "5MMYx",
+                              "x": 9,
+                              "y": 9,
+                              "name": "footerLogoInner",
+                              "width": 14,
+                              "height": 14,
+                              "fill": "#FFFFFF",
+                              "cornerRadius": 4
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "ZKqJd",
+                          "name": "footerLogoText",
+                          "fill": "#FFFFFF",
+                          "content": "NEXABOT",
+                          "fontFamily": "Outfit",
+                          "fontSize": 20,
+                          "fontWeight": "800",
+                          "letterSpacing": 2
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "NdHyG",
+                      "name": "footerTagline",
+                      "fill": "#5A6B7F",
+                      "content": "重新定义人机交互的未来。\n让每个家庭、每家企业都能享受\nAI 机器人带来的便利。",
+                      "lineHeight": 1.7,
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    },
+                    {
+                      "type": "frame",
+                      "id": "2lELO",
+                      "name": "footerSocial",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "s4Oa8",
+                          "name": "socialIcon1",
+                          "width": 36,
+                          "height": 36,
+                          "fill": "#FFFFFF10",
+                          "cornerRadius": 18,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon_font",
+                              "id": "gssUg",
+                              "name": "socialIconInner1",
+                              "width": 16,
+                              "height": 16,
+                              "iconFontName": "twitter",
+                              "iconFontFamily": "lucide",
+                              "fill": "#8A94A6"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "uCYY6",
+                          "name": "socialIcon2",
+                          "width": 36,
+                          "height": 36,
+                          "fill": "#FFFFFF10",
+                          "cornerRadius": 18,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon_font",
+                              "id": "5Gavo",
+                              "name": "socialIconInner2",
+                              "width": 16,
+                              "height": 16,
+                              "iconFontName": "linkedin",
+                              "iconFontFamily": "lucide",
+                              "fill": "#8A94A6"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "johQe",
+                          "name": "socialIcon3",
+                          "width": 36,
+                          "height": 36,
+                          "fill": "#FFFFFF10",
+                          "cornerRadius": 18,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon_font",
+                              "id": "zi3qD",
+                              "name": "socialIconInner3",
+                              "width": 16,
+                              "height": 16,
+                              "iconFontName": "youtube",
+                              "iconFontFamily": "lucide",
+                              "fill": "#8A94A6"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "gFZaR",
+                  "name": "footerLinks",
+                  "gap": 80,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "KIshF",
+                      "name": "col1",
+                      "layout": "vertical",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "imT1N",
+                          "name": "col1Title",
+                          "fill": "#FFFFFF",
+                          "content": "产品",
+                          "fontFamily": "Outfit",
+                          "fontSize": 14,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "cJYlU",
+                          "name": "col1Link1",
+                          "fill": "#5A6B7F",
+                          "content": "NX-One 家庭服务",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        },
+                        {
+                          "type": "text",
+                          "id": "wjUq7",
+                          "name": "col1Link2",
+                          "fill": "#5A6B7F",
+                          "content": "NX-Edu 教育机器人",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        },
+                        {
+                          "type": "text",
+                          "id": "N6OzY",
+                          "name": "col1Link3",
+                          "fill": "#5A6B7F",
+                          "content": "NX-Pro 工业协作",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        },
+                        {
+                          "type": "text",
+                          "id": "01xk8",
+                          "name": "col1Link4",
+                          "fill": "#5A6B7F",
+                          "content": "NX-Med 医疗辅助",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "m1H9t",
+                      "name": "col2",
+                      "layout": "vertical",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "BFUfQ",
+                          "name": "col2Title",
+                          "fill": "#FFFFFF",
+                          "content": "公司",
+                          "fontFamily": "Outfit",
+                          "fontSize": 14,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "dAiJu",
+                          "name": "col2Link1",
+                          "fill": "#5A6B7F",
+                          "content": "关于我们",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        },
+                        {
+                          "type": "text",
+                          "id": "xAv5j",
+                          "name": "col2Link2",
+                          "fill": "#5A6B7F",
+                          "content": "新闻动态",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        },
+                        {
+                          "type": "text",
+                          "id": "0aZ7N",
+                          "name": "col2Link3",
+                          "fill": "#5A6B7F",
+                          "content": "加入我们",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        },
+                        {
+                          "type": "text",
+                          "id": "Eslnn",
+                          "name": "col2Link4",
+                          "fill": "#5A6B7F",
+                          "content": "投资者关系",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "DQnxA",
+                      "name": "col3",
+                      "layout": "vertical",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "8KBzd",
+                          "name": "col3Title",
+                          "fill": "#FFFFFF",
+                          "content": "支持",
+                          "fontFamily": "Outfit",
+                          "fontSize": 14,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "JW7Ls",
+                          "name": "col3Link1",
+                          "fill": "#5A6B7F",
+                          "content": "帮助中心",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        },
+                        {
+                          "type": "text",
+                          "id": "LWAns",
+                          "name": "col3Link2",
+                          "fill": "#5A6B7F",
+                          "content": "技术文档",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        },
+                        {
+                          "type": "text",
+                          "id": "4NrAM",
+                          "name": "col3Link3",
+                          "fill": "#5A6B7F",
+                          "content": "售后服务",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        },
+                        {
+                          "type": "text",
+                          "id": "IClqk",
+                          "name": "col3Link4",
+                          "fill": "#5A6B7F",
+                          "content": "联系我们",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "3gJVo",
+              "name": "footerDivider",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "#FFFFFF10"
+            },
+            {
+              "type": "frame",
+              "id": "Yo5GA",
+              "name": "footerBottom",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "UMpwL",
+                  "name": "footerCopy",
+                  "fill": "#5A6B7F",
+                  "content": "© 2026 NEXABOT. All rights reserved.",
+                  "fontFamily": "Inter",
+                  "fontSize": 12
+                },
+                {
+                  "type": "frame",
+                  "id": "ty1zX",
+                  "name": "footerLegal",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "VBm4v",
+                      "name": "footerPrivacy",
+                      "fill": "#5A6B7F",
+                      "content": "隐私政策",
+                      "fontFamily": "Inter",
+                      "fontSize": 12
+                    },
+                    {
+                      "type": "text",
+                      "id": "rd5Dq",
+                      "name": "footerTerms",
+                      "fill": "#5A6B7F",
+                      "content": "服务条款",
+                      "fontFamily": "Inter",
+                      "fontSize": 12
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "gKFqN",
+      "x": 2120,
+      "y": 0,
+      "name": "NX-One Product Detail",
+      "clip": true,
+      "width": 1920,
+      "fill": "#FFFFFF",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "NsxGC",
+          "name": "nav2",
+          "width": "fill_container",
+          "height": 80,
+          "fill": {
+            "type": "color",
+            "color": "#FFFFFF",
+            "enabled": false
+          },
+          "stroke": {
+            "thickness": {
+              "bottom": 1
+            },
+            "fill": "#0000000A"
+          },
+          "padding": [
+            0,
+            360
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "5CBmO",
+              "name": "logoArea",
+              "gap": 10,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "5J7YX",
+                  "name": "logoIcon",
+                  "width": 36,
+                  "height": 36,
+                  "fill": "#0066FF",
+                  "cornerRadius": 8,
+                  "layout": "none",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "IsnSq",
+                      "x": 0,
+                      "y": 0,
+                      "name": "logoInner",
+                      "width": 16,
+                      "height": 16,
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 4,
+                      "layout": "none"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "jJrc4",
+                  "name": "logoText",
+                  "fill": "#0A0F1E",
+                  "content": "NEXABOT",
+                  "fontFamily": "Outfit",
+                  "fontSize": 22,
+                  "fontWeight": "800",
+                  "letterSpacing": 2
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "0z4vl",
+              "name": "nav",
+              "gap": 40,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "7tSU4",
+                  "name": "navHome",
+                  "fill": "#0A0F1E",
+                  "content": "首页",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "CAFee",
+                  "name": "navProducts",
+                  "fill": "#5A6B7F",
+                  "content": "产品",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "E890Q",
+                  "name": "navAbout",
+                  "fill": "#5A6B7F",
+                  "content": "关于我们",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "xDDJl",
+                  "name": "navTech",
+                  "fill": "#5A6B7F",
+                  "content": "技术",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "ROIXK",
+                  "name": "navContact",
+                  "fill": "#5A6B7F",
+                  "content": "联系",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Dzj2F",
+              "name": "ctaBtn",
+              "fill": "#0066FF",
+              "cornerRadius": 24,
+              "padding": [
+                12,
+                28
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "e8Wgw",
+                  "name": "ctaText",
+                  "fill": "#FFFFFF",
+                  "content": "立即咨询",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "uHqxc",
+          "name": "Product Hero",
+          "width": "fill_container",
+          "height": 760,
+          "fill": {
+            "type": "gradient",
+            "gradientType": "linear",
+            "enabled": true,
+            "rotation": 135,
+            "size": {
+              "height": 1
+            },
+            "colors": [
+              {
+                "color": "#FFFFFF",
+                "position": 0
+              },
+              {
+                "color": "#F5F8FF",
+                "position": 0.5
+              },
+              {
+                "color": "#EBF0FF",
+                "position": 1
+              }
+            ]
+          },
+          "gap": 80,
+          "padding": [
+            60,
+            360
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "y4ogM",
+              "name": "Product Image",
+              "clip": true,
+              "width": 560,
+              "height": 620,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "./images/generated-1770713411720.png",
+                "mode": "fill"
+              },
+              "cornerRadius": 24
+            },
+            {
+              "type": "frame",
+              "id": "BX2TG",
+              "name": "Product Info",
+              "width": "fill_container",
+              "height": "fill_container",
+              "layout": "vertical",
+              "gap": 28,
+              "justifyContent": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "kaAmo",
+                  "name": "breadcrumb",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "DRH6a",
+                      "name": "bc1",
+                      "fill": "#5A6B7F",
+                      "content": "首页",
+                      "fontFamily": "Inter",
+                      "fontSize": 13
+                    },
+                    {
+                      "type": "text",
+                      "id": "aZf38",
+                      "name": "bcSep1",
+                      "fill": "#C0C5D0",
+                      "content": "/",
+                      "fontFamily": "Inter",
+                      "fontSize": 13
+                    },
+                    {
+                      "type": "text",
+                      "id": "5PplW",
+                      "name": "bc2",
+                      "fill": "#5A6B7F",
+                      "content": "产品",
+                      "fontFamily": "Inter",
+                      "fontSize": 13
+                    },
+                    {
+                      "type": "text",
+                      "id": "7xelT",
+                      "name": "bcSep2",
+                      "fill": "#C0C5D0",
+                      "content": "/",
+                      "fontFamily": "Inter",
+                      "fontSize": 13
+                    },
+                    {
+                      "type": "text",
+                      "id": "GAga8",
+                      "name": "bc3",
+                      "fill": "#0066FF",
+                      "content": "NX-One",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "FA3OR",
+                  "name": "prodBadge",
+                  "fill": "#FF4D4D15",
+                  "cornerRadius": 14,
+                  "gap": 6,
+                  "padding": [
+                    6,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "ellipse",
+                      "id": "dgGzf",
+                      "name": "prodBadgeDot",
+                      "fill": "#FF4D4D",
+                      "width": 6,
+                      "height": 6
+                    },
+                    {
+                      "type": "text",
+                      "id": "idbfw",
+                      "name": "prodBadgeText",
+                      "fill": "#FF4D4D",
+                      "content": "热销爆款 · 限时优惠",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "eIclE",
+                  "name": "prodName",
+                  "fill": "#0A0F1E",
+                  "content": "NX-One\n家庭服务机器人",
+                  "lineHeight": 1.15,
+                  "fontFamily": "Outfit",
+                  "fontSize": 48,
+                  "fontWeight": "800",
+                  "letterSpacing": -1
+                },
+                {
+                  "type": "text",
+                  "id": "p1WhP",
+                  "name": "prodDesc",
+                  "fill": "#5A6B7F",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "全屋智能管家，集语音交互、自主导航、情感陪伴于一体。\n搭载 NX-7 神经网络芯片，0.03s 极速响应。",
+                  "lineHeight": 1.7,
+                  "fontFamily": "Inter",
+                  "fontSize": 16
+                },
+                {
+                  "type": "frame",
+                  "id": "jQucU",
+                  "name": "priceRow",
+                  "gap": 12,
+                  "alignItems": "end",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ElLk3",
+                      "name": "priceVal",
+                      "fill": "#0A0F1E",
+                      "content": "¥29,800",
+                      "fontFamily": "Outfit",
+                      "fontSize": 36,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "myK82",
+                      "name": "priceOrig",
+                      "fill": "#B0B5C0",
+                      "content": "¥35,800",
+                      "fontFamily": "Inter",
+                      "fontSize": 16
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "e1CFk",
+                  "name": "specsRow",
+                  "width": "fill_container",
+                  "gap": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "C502L",
+                      "name": "spec1",
+                      "width": "fill_container",
+                      "fill": "#F5F7FA",
+                      "cornerRadius": 12,
+                      "layout": "vertical",
+                      "gap": 6,
+                      "padding": [
+                        16,
+                        20
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "2g9eI",
+                          "name": "spec1Icon",
+                          "width": 22,
+                          "height": 22,
+                          "iconFontName": "cpu",
+                          "iconFontFamily": "lucide",
+                          "fill": "#0066FF"
+                        },
+                        {
+                          "type": "text",
+                          "id": "TLrem",
+                          "name": "spec1Val",
+                          "fill": "#0A0F1E",
+                          "content": "NX-7 芯片",
+                          "fontFamily": "Outfit",
+                          "fontSize": 13,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "bdIXh",
+                      "name": "spec2",
+                      "width": "fill_container",
+                      "fill": "#F5F7FA",
+                      "cornerRadius": 12,
+                      "layout": "vertical",
+                      "gap": 6,
+                      "padding": [
+                        16,
+                        20
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "rFvbp",
+                          "name": "spec2Icon",
+                          "width": 22,
+                          "height": 22,
+                          "iconFontName": "battery-charging",
+                          "iconFontFamily": "lucide",
+                          "fill": "#0066FF"
+                        },
+                        {
+                          "type": "text",
+                          "id": "zLpLm",
+                          "name": "spec2Val",
+                          "fill": "#0A0F1E",
+                          "content": "12h 续航",
+                          "fontFamily": "Outfit",
+                          "fontSize": 13,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "9mUlp",
+                      "name": "spec3",
+                      "width": "fill_container",
+                      "fill": "#F5F7FA",
+                      "cornerRadius": 12,
+                      "layout": "vertical",
+                      "gap": 6,
+                      "padding": [
+                        16,
+                        20
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "nQBXn",
+                          "name": "spec3Icon",
+                          "width": 22,
+                          "height": 22,
+                          "iconFontName": "radar",
+                          "iconFontFamily": "lucide",
+                          "fill": "#0066FF"
+                        },
+                        {
+                          "type": "text",
+                          "id": "5qnks",
+                          "name": "spec3Val",
+                          "fill": "#0A0F1E",
+                          "content": "360° 感知",
+                          "fontFamily": "Outfit",
+                          "fontSize": 13,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "qgUix",
+                  "name": "buyRow",
+                  "gap": 16,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "YQTf0",
+                      "name": "buyBtn",
+                      "fill": "#0066FF",
+                      "cornerRadius": 32,
+                      "gap": 10,
+                      "padding": [
+                        18,
+                        48
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "xc08Z",
+                          "name": "buyBtnText",
+                          "fill": "#FFFFFF",
+                          "content": "立即购买",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "icon_font",
+                          "id": "HJJHf",
+                          "name": "buyBtnIcon",
+                          "width": 20,
+                          "height": 20,
+                          "iconFontName": "shopping-cart",
+                          "iconFontFamily": "lucide",
+                          "fill": "#FFFFFF"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "4I1nb",
+                      "name": "cartBtn",
+                      "cornerRadius": 32,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D0D5DD"
+                      },
+                      "gap": 8,
+                      "padding": [
+                        18,
+                        32
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "NiFv5",
+                          "name": "cartBtnIcon",
+                          "width": 20,
+                          "height": 20,
+                          "iconFontName": "heart",
+                          "iconFontFamily": "lucide",
+                          "fill": "#5A6B7F"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Z4WgY",
+                          "name": "cartBtnText",
+                          "fill": "#0A0F1E",
+                          "content": "收藏",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "zVU4U",
+          "name": "Features Section",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "layout": "vertical",
+          "gap": 80,
+          "padding": [
+            100,
+            360
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "t7MEa",
+              "name": "featHeader",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "SCELO",
+                  "name": "featLabel",
+                  "fill": "#0066FF",
+                  "content": "CORE FEATURES",
+                  "fontFamily": "Outfit",
+                  "fontSize": 13,
+                  "fontWeight": "600",
+                  "letterSpacing": 4
+                },
+                {
+                  "type": "text",
+                  "id": "M4H16",
+                  "name": "featTitle",
+                  "fill": "#0A0F1E",
+                  "content": "为智慧生活而生",
+                  "textAlign": "center",
+                  "fontFamily": "Outfit",
+                  "fontSize": 42,
+                  "fontWeight": "800",
+                  "letterSpacing": -1
+                },
+                {
+                  "type": "text",
+                  "id": "C3dr5",
+                  "name": "featSub",
+                  "fill": "#5A6B7F",
+                  "content": "六大核心功能，重新定义家庭智能服务体验",
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 16
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "fbf3C",
+              "name": "Feature 1",
+              "width": "fill_container",
+              "height": 400,
+              "gap": 60,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "TadJ6",
+                  "name": "feat1Img",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1770713439146.png",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": 20
+                },
+                {
+                  "type": "frame",
+                  "id": "cJtES",
+                  "name": "feat1Info",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "PYHri",
+                      "name": "feat1Num",
+                      "fill": "#0066FF15",
+                      "content": "01",
+                      "fontFamily": "Outfit",
+                      "fontSize": 64,
+                      "fontWeight": "900",
+                      "letterSpacing": -2
+                    },
+                    {
+                      "type": "text",
+                      "id": "fQG4B",
+                      "name": "feat1Name",
+                      "fill": "#0A0F1E",
+                      "content": "自然语音交互",
+                      "fontFamily": "Outfit",
+                      "fontSize": 28,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "RHQez",
+                      "name": "feat1Desc",
+                      "fill": "#5A6B7F",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "支持中英日韩等 12 种语言的自然语音对话，语义理解准确率达 98.5%。可识别家庭成员声纹，提供个性化服务。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Inter",
+                      "fontSize": 15
+                    },
+                    {
+                      "type": "frame",
+                      "id": "NeYuT",
+                      "name": "feat1Tags",
+                      "gap": 10,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "ZTYvi",
+                          "name": "feat1Tag1",
+                          "fill": "#F5F7FA",
+                          "cornerRadius": 8,
+                          "padding": [
+                            6,
+                            14
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "ElqVj",
+                              "name": "feat1Tag1t",
+                              "fill": "#5A6B7F",
+                              "content": "12种语言",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "t3L3W",
+                          "name": "feat1Tag2",
+                          "fill": "#F5F7FA",
+                          "cornerRadius": 8,
+                          "padding": [
+                            6,
+                            14
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "Dpetc",
+                              "name": "feat1Tag2t",
+                              "fill": "#5A6B7F",
+                              "content": "98.5%准确率",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "KJSWZ",
+                          "name": "feat1Tag3",
+                          "fill": "#F5F7FA",
+                          "cornerRadius": 8,
+                          "padding": [
+                            6,
+                            14
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "iEUVL",
+                              "name": "feat1Tag3t",
+                              "fill": "#5A6B7F",
+                              "content": "声纹识别",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "0puvx",
+              "name": "Feature 2",
+              "width": "fill_container",
+              "height": 400,
+              "gap": 60,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "AR28d",
+                  "name": "feat2Info",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "cabkd",
+                      "name": "feat2Num",
+                      "fill": "#0066FF15",
+                      "content": "02",
+                      "fontFamily": "Outfit",
+                      "fontSize": 64,
+                      "fontWeight": "900",
+                      "letterSpacing": -2
+                    },
+                    {
+                      "type": "text",
+                      "id": "DdlEY",
+                      "name": "feat2Name",
+                      "fill": "#0A0F1E",
+                      "content": "自主导航避障",
+                      "fontFamily": "Outfit",
+                      "fontSize": 28,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "eag3b",
+                      "name": "feat2Desc",
+                      "fill": "#5A6B7F",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "搭载 LiDAR + 视觉融合导航系统，毫米级精度建图，智能规划最优路径。支持多楼层记忆，轻松跨越 2cm 障碍。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Inter",
+                      "fontSize": 15
+                    },
+                    {
+                      "type": "frame",
+                      "id": "1KfIY",
+                      "name": "feat2Tags",
+                      "gap": 10,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "bQasH",
+                          "name": "feat2Tag1",
+                          "fill": "#F5F7FA",
+                          "cornerRadius": 8,
+                          "padding": [
+                            6,
+                            14
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "dhOMu",
+                              "name": "feat2Tag1t",
+                              "fill": "#5A6B7F",
+                              "content": "LiDAR 导航",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "8YZt3",
+                          "name": "feat2Tag2",
+                          "fill": "#F5F7FA",
+                          "cornerRadius": 8,
+                          "padding": [
+                            6,
+                            14
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "LeCRY",
+                              "name": "feat2Tag2t",
+                              "fill": "#5A6B7F",
+                              "content": "多楼层记忆",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "HoRRH",
+                  "name": "feat2Img",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1770713456127.png",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": 20
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Fz1yO",
+              "name": "Feature 3",
+              "width": "fill_container",
+              "height": 400,
+              "gap": 60,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "XItpt",
+                  "name": "feat3Img",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1770713464598.png",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": 20
+                },
+                {
+                  "type": "frame",
+                  "id": "uqCZw",
+                  "name": "feat3Info",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Paaub",
+                      "name": "feat3Num",
+                      "fill": "#0066FF15",
+                      "content": "03",
+                      "fontFamily": "Outfit",
+                      "fontSize": 64,
+                      "fontWeight": "900",
+                      "letterSpacing": -2
+                    },
+                    {
+                      "type": "text",
+                      "id": "Z6ekZ",
+                      "name": "feat3Name",
+                      "fill": "#0A0F1E",
+                      "content": "情感陪伴交互",
+                      "fontFamily": "Outfit",
+                      "fontSize": 28,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "1ol0g",
+                      "name": "feat3Desc",
+                      "fill": "#5A6B7F",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "基于多模态情感计算引擎，实时感知用户情绪状态，提供温暖的情感陪伴。支持表情、语调、手势多维度情感表达。",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Inter",
+                      "fontSize": 15
+                    },
+                    {
+                      "type": "frame",
+                      "id": "CixsP",
+                      "name": "feat3Tags",
+                      "gap": 10,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "TCmGS",
+                          "name": "feat3Tag1",
+                          "fill": "#F5F7FA",
+                          "cornerRadius": 8,
+                          "padding": [
+                            6,
+                            14
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "NjeQo",
+                              "name": "feat3Tag1t",
+                              "fill": "#5A6B7F",
+                              "content": "情绪感知",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "ZecF3",
+                          "name": "feat3Tag2",
+                          "fill": "#F5F7FA",
+                          "cornerRadius": 8,
+                          "padding": [
+                            6,
+                            14
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "VzgU9",
+                              "name": "feat3Tag2t",
+                              "fill": "#5A6B7F",
+                              "content": "多维表达",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "6LnjT",
+          "name": "Specs Section",
+          "width": "fill_container",
+          "fill": "#0A0F1E",
+          "layout": "vertical",
+          "gap": 60,
+          "padding": [
+            100,
+            360
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "FzsEw",
+              "name": "specHeader",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "AYmm6",
+                  "name": "specLabel",
+                  "fill": "#0066FF",
+                  "content": "SPECIFICATIONS",
+                  "fontFamily": "Outfit",
+                  "fontSize": 13,
+                  "fontWeight": "600",
+                  "letterSpacing": 4
+                },
+                {
+                  "type": "text",
+                  "id": "6l5cX",
+                  "name": "specTitle",
+                  "fill": "#FFFFFF",
+                  "content": "技术规格",
+                  "fontFamily": "Outfit",
+                  "fontSize": 42,
+                  "fontWeight": "800",
+                  "letterSpacing": -1
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "xgwyY",
+              "name": "specGrid",
+              "clip": true,
+              "width": "fill_container",
+              "fill": "#FFFFFF10",
+              "cornerRadius": 20,
+              "gap": 1,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "mupz0",
+                  "name": "specCol1",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 1,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "oKw7V",
+                      "name": "specItem1",
+                      "width": "fill_container",
+                      "fill": "#0A0F1E",
+                      "padding": [
+                        24,
+                        28
+                      ],
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "d7pOt",
+                          "name": "specItem1L",
+                          "fill": "#8A94A6",
+                          "content": "处理器",
+                          "fontFamily": "Inter",
+                          "fontSize": 14
+                        },
+                        {
+                          "type": "text",
+                          "id": "8lj1k",
+                          "name": "specItem1R",
+                          "fill": "#FFFFFF",
+                          "content": "NX-7 神经网络芯片",
+                          "fontFamily": "Outfit",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "qcjU3",
+                      "name": "specItem2",
+                      "width": "fill_container",
+                      "fill": "#0A0F1E",
+                      "padding": [
+                        24,
+                        28
+                      ],
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Aocyr",
+                          "name": "specItem2L",
+                          "fill": "#8A94A6",
+                          "content": "电池续航",
+                          "fontFamily": "Inter",
+                          "fontSize": 14
+                        },
+                        {
+                          "type": "text",
+                          "id": "N1ULX",
+                          "name": "specItem2R",
+                          "fill": "#FFFFFF",
+                          "content": "12 小时 / 10000mAh",
+                          "fontFamily": "Outfit",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "eHvMu",
+                      "name": "specItem3",
+                      "width": "fill_container",
+                      "fill": "#0A0F1E",
+                      "padding": [
+                        24,
+                        28
+                      ],
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "gbkxv",
+                          "name": "specItem3L",
+                          "fill": "#8A94A6",
+                          "content": "导航系统",
+                          "fontFamily": "Inter",
+                          "fontSize": 14
+                        },
+                        {
+                          "type": "text",
+                          "id": "rT9Bc",
+                          "name": "specItem3R",
+                          "fill": "#FFFFFF",
+                          "content": "LiDAR + 视觉融合",
+                          "fontFamily": "Outfit",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "kxdl5",
+                      "name": "specItem4",
+                      "width": "fill_container",
+                      "fill": "#0A0F1E",
+                      "padding": [
+                        24,
+                        28
+                      ],
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "VcXOz",
+                          "name": "specItem4L",
+                          "fill": "#8A94A6",
+                          "content": "尺寸",
+                          "fontFamily": "Inter",
+                          "fontSize": 14
+                        },
+                        {
+                          "type": "text",
+                          "id": "FSBEJ",
+                          "name": "specItem4R",
+                          "fill": "#FFFFFF",
+                          "content": "450 × 380 × 1200 mm",
+                          "fontFamily": "Outfit",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "0QQTo",
+                  "name": "specCol2",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 1,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "RUfBX",
+                      "name": "specItem5",
+                      "width": "fill_container",
+                      "fill": "#0A0F1E",
+                      "padding": [
+                        24,
+                        28
+                      ],
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "SR8Is",
+                          "name": "specItem5L",
+                          "fill": "#8A94A6",
+                          "content": "重量",
+                          "fontFamily": "Inter",
+                          "fontSize": 14
+                        },
+                        {
+                          "type": "text",
+                          "id": "khMWk",
+                          "name": "specItem5R",
+                          "fill": "#FFFFFF",
+                          "content": "18.5 kg",
+                          "fontFamily": "Outfit",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "uDCh4",
+                      "name": "specItem6",
+                      "width": "fill_container",
+                      "fill": "#0A0F1E",
+                      "padding": [
+                        24,
+                        28
+                      ],
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "7o0GL",
+                          "name": "specItem6L",
+                          "fill": "#8A94A6",
+                          "content": "语音助手",
+                          "fontFamily": "Inter",
+                          "fontSize": 14
+                        },
+                        {
+                          "type": "text",
+                          "id": "5j6hI",
+                          "name": "specItem6R",
+                          "fill": "#FFFFFF",
+                          "content": "12 语言 / 98.5% 准确率",
+                          "fontFamily": "Outfit",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Vfrxm",
+                      "name": "specItem7",
+                      "width": "fill_container",
+                      "fill": "#0A0F1E",
+                      "padding": [
+                        24,
+                        28
+                      ],
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "S4DP1",
+                          "name": "specItem7L",
+                          "fill": "#8A94A6",
+                          "content": "传感器",
+                          "fontFamily": "Inter",
+                          "fontSize": 14
+                        },
+                        {
+                          "type": "text",
+                          "id": "vplXh",
+                          "name": "specItem7R",
+                          "fill": "#FFFFFF",
+                          "content": "360° LiDAR + 深度摄像头",
+                          "fontFamily": "Outfit",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Cw8f6",
+                      "name": "specItem8",
+                      "width": "fill_container",
+                      "fill": "#0A0F1E",
+                      "padding": [
+                        24,
+                        28
+                      ],
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "yKpeQ",
+                          "name": "specItem8L",
+                          "fill": "#8A94A6",
+                          "content": "连接",
+                          "fontFamily": "Inter",
+                          "fontSize": 14
+                        },
+                        {
+                          "type": "text",
+                          "id": "wrPPD",
+                          "name": "specItem8R",
+                          "fill": "#FFFFFF",
+                          "content": "Wi-Fi 6 / BT 5.3 / Zigbee",
+                          "fontFamily": "Outfit",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Xsato",
+          "name": "Gallery Section",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "layout": "vertical",
+          "gap": 60,
+          "padding": [
+            100,
+            360
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "lSJDM",
+              "name": "galHeader",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "2S17i",
+                  "name": "galLabel",
+                  "fill": "#0066FF",
+                  "content": "GALLERY",
+                  "fontFamily": "Outfit",
+                  "fontSize": 13,
+                  "fontWeight": "600",
+                  "letterSpacing": 4
+                },
+                {
+                  "type": "text",
+                  "id": "YlUa1",
+                  "name": "galTitle",
+                  "fill": "#0A0F1E",
+                  "content": "产品展示",
+                  "fontFamily": "Outfit",
+                  "fontSize": 42,
+                  "fontWeight": "800",
+                  "letterSpacing": -1
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "E8QHR",
+              "name": "galGrid",
+              "width": "fill_container",
+              "height": 320,
+              "gap": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Dy3Dr",
+                  "name": "galImg1",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1770713488643.png",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": 16
+                },
+                {
+                  "type": "frame",
+                  "id": "rfkXv",
+                  "name": "galImg2",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1770713495910.png",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": 16
+                },
+                {
+                  "type": "frame",
+                  "id": "vVCdI",
+                  "name": "galImg3",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1770713503289.png",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": 16
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "aKBdX",
+          "name": "Buy CTA",
+          "width": "fill_container",
+          "fill": "#F5F7FA",
+          "gap": 60,
+          "padding": [
+            80,
+            360
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "1N7tG",
+              "name": "buyCtaLeft",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "TxxZg",
+                  "name": "buyCtaTitle",
+                  "fill": "#0A0F1E",
+                  "content": "立即拥有 NX-One",
+                  "fontFamily": "Outfit",
+                  "fontSize": 36,
+                  "fontWeight": "800",
+                  "letterSpacing": -1
+                },
+                {
+                  "type": "text",
+                  "id": "EeIlB",
+                  "name": "buyCtaDesc",
+                  "fill": "#5A6B7F",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "现在下单即享限时优惠价 ¥29,800（原价 ¥35,800），\n含免费上门安装调试、一年延保和 7×24 技术支持。",
+                  "lineHeight": 1.7,
+                  "fontFamily": "Inter",
+                  "fontSize": 15
+                },
+                {
+                  "type": "frame",
+                  "id": "aAJJ2",
+                  "name": "buyCtaFeats",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Uima8",
+                      "name": "buyF1",
+                      "gap": 10,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "oXtOa",
+                          "name": "buyF1Icon",
+                          "width": 18,
+                          "height": 18,
+                          "iconFontName": "circle-check",
+                          "iconFontFamily": "lucide",
+                          "fill": "#0066FF"
+                        },
+                        {
+                          "type": "text",
+                          "id": "KXIAr",
+                          "name": "buyF1Text",
+                          "fill": "#0A0F1E",
+                          "content": "30 天无理由退款",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "O4m7q",
+                      "name": "buyF2",
+                      "gap": 10,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "ieoPh",
+                          "name": "buyF2Icon",
+                          "width": 18,
+                          "height": 18,
+                          "iconFontName": "circle-check",
+                          "iconFontFamily": "lucide",
+                          "fill": "#0066FF"
+                        },
+                        {
+                          "type": "text",
+                          "id": "zbS8c",
+                          "name": "buyF2Text",
+                          "fill": "#0A0F1E",
+                          "content": "免费上门安装调试",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "uLlS1",
+                      "name": "buyF3",
+                      "gap": 10,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "rrZUc",
+                          "name": "buyF3Icon",
+                          "width": 18,
+                          "height": 18,
+                          "iconFontName": "circle-check",
+                          "iconFontFamily": "lucide",
+                          "fill": "#0066FF"
+                        },
+                        {
+                          "type": "text",
+                          "id": "9u9aW",
+                          "name": "buyF3Text",
+                          "fill": "#0A0F1E",
+                          "content": "终身 OTA 软件升级",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "BjpBS",
+              "name": "buyCtaRight",
+              "width": 360,
+              "fill": "#FFFFFF",
+              "cornerRadius": 24,
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#0A0F1E08",
+                "offset": {
+                  "x": 0,
+                  "y": 8
+                },
+                "blur": 40
+              },
+              "layout": "vertical",
+              "gap": 24,
+              "padding": [
+                40,
+                36
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "fiZRS",
+                  "name": "buyPriceLabel",
+                  "fill": "#5A6B7F",
+                  "content": "限时特惠价",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "r0PWZ",
+                  "name": "buyPriceVal",
+                  "fill": "#0A0F1E",
+                  "content": "¥29,800",
+                  "fontFamily": "Outfit",
+                  "fontSize": 44,
+                  "fontWeight": "900"
+                },
+                {
+                  "type": "text",
+                  "id": "jpG17",
+                  "name": "buyPriceOrig",
+                  "fill": "#B0B5C0",
+                  "content": "原价 ¥35,800",
+                  "fontFamily": "Inter",
+                  "fontSize": 14
+                },
+                {
+                  "type": "frame",
+                  "id": "HfVDe",
+                  "name": "buyNowBtn",
+                  "width": "fill_container",
+                  "fill": "#0066FF",
+                  "cornerRadius": 32,
+                  "gap": 10,
+                  "padding": [
+                    18,
+                    0
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "P4zjy",
+                      "name": "buyNowText",
+                      "fill": "#FFFFFF",
+                      "content": "立即购买",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "BiYmu",
+          "name": "footer2",
+          "width": "fill_container",
+          "fill": "#0A0F1E",
+          "layout": "vertical",
+          "gap": 48,
+          "padding": [
+            60,
+            360,
+            40,
+            360
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "6SFAO",
+              "name": "footerTop",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "ID1a2",
+                  "name": "footerBrand",
+                  "width": 320,
+                  "layout": "vertical",
+                  "gap": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Z7jXD",
+                      "name": "footerLogoRow",
+                      "gap": 10,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "gzqTR",
+                          "name": "footerLogoIcon",
+                          "width": 32,
+                          "height": 32,
+                          "fill": "#0066FF",
+                          "cornerRadius": 8,
+                          "layout": "none",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "bUD9N",
+                              "x": 9,
+                              "y": 9,
+                              "name": "footerLogoInner",
+                              "width": 14,
+                              "height": 14,
+                              "fill": "#FFFFFF",
+                              "cornerRadius": 4
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "DvnD9",
+                          "name": "footerLogoText",
+                          "fill": "#FFFFFF",
+                          "content": "NEXABOT",
+                          "fontFamily": "Outfit",
+                          "fontSize": 20,
+                          "fontWeight": "800",
+                          "letterSpacing": 2
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "tLh1G",
+                      "name": "footerTagline",
+                      "fill": "#5A6B7F",
+                      "content": "重新定义人机交互的未来。\n让每个家庭、每家企业都能享受\nAI 机器人带来的便利。",
+                      "lineHeight": 1.7,
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    },
+                    {
+                      "type": "frame",
+                      "id": "7sTUn",
+                      "name": "footerSocial",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "sHcxJ",
+                          "name": "socialIcon1",
+                          "width": 36,
+                          "height": 36,
+                          "fill": "#FFFFFF10",
+                          "cornerRadius": 18,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon_font",
+                              "id": "ZNtXw",
+                              "name": "socialIconInner1",
+                              "width": 16,
+                              "height": 16,
+                              "iconFontName": "twitter",
+                              "iconFontFamily": "lucide",
+                              "fill": "#8A94A6"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "9ADLO",
+                          "name": "socialIcon2",
+                          "width": 36,
+                          "height": 36,
+                          "fill": "#FFFFFF10",
+                          "cornerRadius": 18,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon_font",
+                              "id": "DgztA",
+                              "name": "socialIconInner2",
+                              "width": 16,
+                              "height": 16,
+                              "iconFontName": "linkedin",
+                              "iconFontFamily": "lucide",
+                              "fill": "#8A94A6"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "VBkcw",
+                          "name": "socialIcon3",
+                          "width": 36,
+                          "height": 36,
+                          "fill": "#FFFFFF10",
+                          "cornerRadius": 18,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon_font",
+                              "id": "zVV36",
+                              "name": "socialIconInner3",
+                              "width": 16,
+                              "height": 16,
+                              "iconFontName": "youtube",
+                              "iconFontFamily": "lucide",
+                              "fill": "#8A94A6"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "rE64b",
+                  "name": "footerLinks",
+                  "gap": 80,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "QCLGP",
+                      "name": "col1",
+                      "layout": "vertical",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "mZEsQ",
+                          "name": "col1Title",
+                          "fill": "#FFFFFF",
+                          "content": "产品",
+                          "fontFamily": "Outfit",
+                          "fontSize": 14,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "XIWZf",
+                          "name": "col1Link1",
+                          "fill": "#5A6B7F",
+                          "content": "NX-One 家庭服务",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        },
+                        {
+                          "type": "text",
+                          "id": "LU4FV",
+                          "name": "col1Link2",
+                          "fill": "#5A6B7F",
+                          "content": "NX-Edu 教育机器人",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        },
+                        {
+                          "type": "text",
+                          "id": "uhgq1",
+                          "name": "col1Link3",
+                          "fill": "#5A6B7F",
+                          "content": "NX-Pro 工业协作",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        },
+                        {
+                          "type": "text",
+                          "id": "MiHJg",
+                          "name": "col1Link4",
+                          "fill": "#5A6B7F",
+                          "content": "NX-Med 医疗辅助",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "USDVB",
+                      "name": "col2",
+                      "layout": "vertical",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "TXAJG",
+                          "name": "col2Title",
+                          "fill": "#FFFFFF",
+                          "content": "公司",
+                          "fontFamily": "Outfit",
+                          "fontSize": 14,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "aP2Yk",
+                          "name": "col2Link1",
+                          "fill": "#5A6B7F",
+                          "content": "关于我们",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        },
+                        {
+                          "type": "text",
+                          "id": "rlzyN",
+                          "name": "col2Link2",
+                          "fill": "#5A6B7F",
+                          "content": "新闻动态",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        },
+                        {
+                          "type": "text",
+                          "id": "cOKbc",
+                          "name": "col2Link3",
+                          "fill": "#5A6B7F",
+                          "content": "加入我们",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        },
+                        {
+                          "type": "text",
+                          "id": "Kl7ye",
+                          "name": "col2Link4",
+                          "fill": "#5A6B7F",
+                          "content": "投资者关系",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "c8lII",
+                      "name": "col3",
+                      "layout": "vertical",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "NFCUN",
+                          "name": "col3Title",
+                          "fill": "#FFFFFF",
+                          "content": "支持",
+                          "fontFamily": "Outfit",
+                          "fontSize": 14,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "k7yP4",
+                          "name": "col3Link1",
+                          "fill": "#5A6B7F",
+                          "content": "帮助中心",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        },
+                        {
+                          "type": "text",
+                          "id": "OxkO3",
+                          "name": "col3Link2",
+                          "fill": "#5A6B7F",
+                          "content": "技术文档",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        },
+                        {
+                          "type": "text",
+                          "id": "BdK0M",
+                          "name": "col3Link3",
+                          "fill": "#5A6B7F",
+                          "content": "售后服务",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        },
+                        {
+                          "type": "text",
+                          "id": "aivcd",
+                          "name": "col3Link4",
+                          "fill": "#5A6B7F",
+                          "content": "联系我们",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "V9HzZ",
+              "name": "footerDivider",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "#FFFFFF10"
+            },
+            {
+              "type": "frame",
+              "id": "v4Bky",
+              "name": "footerBottom",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "HqrKl",
+                  "name": "footerCopy",
+                  "fill": "#5A6B7F",
+                  "content": "© 2026 NEXABOT. All rights reserved.",
+                  "fontFamily": "Inter",
+                  "fontSize": 12
+                },
+                {
+                  "type": "frame",
+                  "id": "qdGnM",
+                  "name": "footerLegal",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "EpqpQ",
+                      "name": "footerPrivacy",
+                      "fill": "#5A6B7F",
+                      "content": "隐私政策",
+                      "fontFamily": "Inter",
+                      "fontSize": 12
+                    },
+                    {
+                      "type": "text",
+                      "id": "woz7p",
+                      "name": "footerTerms",
+                      "fill": "#5A6B7F",
+                      "content": "服务条款",
+                      "fontFamily": "Inter",
+                      "fontSize": 12
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

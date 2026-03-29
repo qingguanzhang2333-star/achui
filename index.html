@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>阿锤的 2026 UX Design 作品集</title>
+<style>
+:root {
+  --pink: #FFE0F9;
+  --gray: rgba(224, 227, 231, 0.6);
+  --yellow: #FBEFD9;
+  --text: #1C2022;
+  --bg: #F8F9FA;
+  --purple: #DEDFFB;
+  --purple-light: #EFE6FF;
+  --cream: #EFE6E2;
+  --cream-light: #F6F1EF;
+  --tag-bg: rgba(255,255,255,0.44);
+  --tool-bg: #EEE6E2;
+  --badge-bg: #ECEDF2;
+  --border: rgba(177,182,185,0.21);
+  --footer-bg: #EAEEF1;
+  --sub: rgba(7,16,27,0.54);
+  --gray-solid: #E4E3E8;
+  --pink-warm: #FFF1FC;
+}
+@font-face{font-family:'HYPixel11px';src:url('fonts/HYPixel11pxU-2.ttf') format('truetype');font-weight:normal;font-style:normal;font-display:swap}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'PingFang SC',-apple-system,'Microsoft YaHei',sans-serif;color:var(--text);background:#fff;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.pf{font-family:'HYPixel11px','HYPixel 11px','Press Start 2P',monospace;text-transform:capitalize}
+
+/* ===== NAV ===== */
+.nav{position:sticky;top:0;z-index:100;background:#fff;display:flex;align-items:center;justify-content:space-between;padding:16px 40px;box-shadow:0 1px 3px rgba(0,0,0,0.04)}
+.nav-left{display:flex;align-items:center;gap:8px}
+.nav-home{width:32px;height:32px;display:flex;align-items:center;justify-content:center;background:var(--text);border-radius:6px}
+.nav-home svg{width:16px;height:16px;fill:#fff}
+.nav-tabs{display:flex;align-items:center;gap:6px}
+.nav-tab{display:inline-flex;align-items:center;padding:8px 20px 11px;border-radius:40px;cursor:pointer;transition:all .3s}
+.nav-tab span{font-size:15px;letter-spacing:-0.05em;white-space:nowrap}
+.nav-tab.active{background:var(--text);color:#fff}
+.nav-tab.active span{color:#fff}
+.nav-tab:not(.active){background:var(--gray);color:var(--text)}
+.nav-tab.sq{border-radius:0}
+.nav-right{display:flex;gap:4px}
+.nav-heart{width:22px;height:22px;color:#E74C3C}
+
+/* ===== HERO ===== */
+.hero{position:relative;width:100%;height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;background:#fff;overflow:hidden}
+.hero-computer{display:none}
+.hero-spline{position:absolute;left:50%;top:50%;transform:translate(-50%,calc(-50% - 160px));z-index:1;width:max(100%,100vh * 16/9);height:max(100%,100vw * 9/16);min-width:100%;min-height:100%;overflow:hidden}
+.hero-spline canvas{width:100%!important;height:100%!important;display:block;object-fit:cover}
+.hero-pills{position:absolute;bottom:348px;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:6px}
+.hero-row{display:flex;align-items:center;gap:18px}
+.pill{display:inline-flex;align-items:center;justify-content:center;white-space:nowrap}
+.pill-hero{padding:24px 42px 26px;border-radius:111px}
+.pill-hero.sq{border-radius:0}
+.pill-hero .t{font-weight:600;font-size:clamp(36px,4.2vw,76px);line-height:1.03}
+.pill-hero .t-lg{font-weight:600;font-size:clamp(42px,4.8vw,86px);line-height:1.02}
+.bg-pink{background:var(--pink)}.bg-gray{background:var(--gray)}.bg-yellow{background:var(--yellow)}.bg-purple{background:var(--purple)}.bg-cream{background:var(--yellow)}.bg-gray-s{background:var(--gray-solid)}
+
+.hero-deco{position:absolute;z-index:3}
+.hero-stars{position:absolute;z-index:0}
+
+.hero-bottom{position:absolute;bottom:0;left:0;right:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:20px 40px;background:#fff}
+.hero-brand{display:flex;align-items:center;gap:6px}
+.hero-brand span{font-size:15px;letter-spacing:-0.03em}
+.badge{display:inline-flex;align-items:center;padding:1px 7px;border-radius:3px}
+
+/* ===== SECTION INTRO ===== */
+.sec-intro{background:var(--bg);padding:120px 0}
+.intro-wrap{max-width:1400px;margin:0 auto;padding:0 clamp(20px,3vw,60px);display:flex;gap:clamp(60px,8vw,140px)}
+.intro-l{flex:0 0 45%;display:flex;flex-direction:column;justify-content:space-between;gap:24px}
+.intro-cards{display:flex;flex-direction:column;gap:24px}
+.intro-r{flex:1;display:flex;flex-direction:column;gap:60px}
+
+.sec-title-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.pill-sec{padding:8px 32px 12px;border-radius:50px}
+.pill-sec.rd{border-radius:0}
+.pill-sec .t{font-weight:500;font-size:clamp(20px,2.2vw,40px);line-height:1.4;letter-spacing:-0.07em}
+.emoji-box{display:flex;align-items:center;justify-content:center;padding:0 34px;background:var(--gray);border-radius:111px;width:75px;box-sizing:border-box;align-self:stretch}
+.emoji-box img{width:57px;height:52px;object-fit:contain}
+
+.info-card{padding:24px;display:flex;flex-direction:column;gap:20px}
+.info-card.bg-pink{max-width:322px}
+.info-row{display:flex;align-items:center;gap:16px}
+.info-tag{padding:6px 14px;background:var(--tag-bg);border-radius:6px;font-weight:500;font-size:16px}
+.info-val{font-weight:500;font-size:16px}
+.info-val-group{display:flex;align-items:center;gap:10px}
+
+.skill-tags{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-start}
+.skill-tag{padding:6px 19px;background:var(--tag-bg);border-radius:41px;font-weight:500;font-size:16px}
+.skill-tag.sq{border-radius:0}
+.skill-icons{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+.s-icon{width:32px;height:32px;border-radius:6px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.s-icon img{width:22px;height:22px;object-fit:contain}
+
+/* Experience */
+.exp-head{display:flex;flex-direction:column;gap:10px}
+.exp-badge{padding:6px 18px;background:var(--gray);border-radius:6px;display:inline-flex;align-items:center;width:fit-content}
+.exp-badge span{font-size:29px;line-height:1.31}
+.exp-title-pill{padding:6px 24px;background:var(--pink);border-radius:50px;display:inline-flex;width:fit-content}
+.exp-title-pill span{font-weight:500;font-size:clamp(18px,1.7vw,32px);letter-spacing:-0.07em}
+.exp-dot{width:14px;height:5px;background:var(--text);border-radius:3px}
+.exp-list{display:flex;flex-direction:column}
+.exp-item{display:flex;flex-direction:column;gap:18px}
+.exp-item+.exp-item{margin-top:48px;position:relative}
+.exp-item+.exp-item::before{content:'';position:absolute;left:0;right:0;top:-24px;border-top:1px solid var(--border)}
+.exp-item-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.exp-company{display:flex;align-items:center;gap:10px;padding:4px 12px;background:var(--gray);border-radius:8px}
+.exp-logo{width:24px;height:24px;border-radius:4px;object-fit:cover}
+.exp-name{font-weight:500;font-size:18px;line-height:2.22}
+.exp-tags{display:flex;gap:8px}
+.exp-tag{padding:6px 14px;background:var(--gray);border-radius:50px;font-weight:500;font-size:16px}
+.exp-desc{font-size:16px;line-height:2;white-space:pre-line}
+
+/* ===== PROJECTS ===== */
+.sec-proj{background:#fff;padding:120px 0;position:relative}
+.sec-proj::before{content:'';position:absolute;inset:0;background:url(images/pattern-bg.png) repeat;background-size:138px;opacity:.05;z-index:0}
+.proj-wrap{position:relative;z-index:1;max-width:1400px;margin:0 auto;padding:0 clamp(20px,3vw,60px);display:flex;flex-direction:column;align-items:center;gap:160px}
+.proj-title{display:flex;flex-direction:column;align-items:center;gap:14px}
+.proj-title img{width:44px;height:44px;object-fit:contain}
+.proj-title span{font-weight:500;font-size:clamp(26px,2.4vw,44.5px);letter-spacing:-0.07em}
+.proj-list{display:flex;flex-direction:column;gap:140px;width:100%}
+.proj-card{display:flex;align-items:center;justify-content:space-between;gap:clamp(40px,5vw,80px)}
+.proj-info{flex:1;max-width:533px;display:flex;flex-direction:column;gap:32px}
+.proj-name-row{display:flex;align-items:center;gap:16px}
+.proj-name{font-weight:600;font-size:clamp(20px,1.6vw,30px);line-height:1.4}
+.proj-badge{padding:5px 14px;background:var(--badge-bg);border-radius:50px;font-weight:500;font-size:18px}
+.proj-desc{font-weight:300;font-size:clamp(15px,1.05vw,20px);line-height:1.7;color:var(--sub)}
+.proj-img-wrap{flex:0 0 auto;width:clamp(280px,38vw,535px);perspective:1000px}
+.proj-img{width:100%;aspect-ratio:535/331;border-radius:26px;overflow:hidden;background:#C3C3C3;position:relative;transition:transform .3s ease,box-shadow .3s ease;transform-style:preserve-3d;will-change:transform}
+.proj-img:hover{box-shadow:0 20px 40px rgba(0,0,0,.12),0 8px 16px rgba(0,0,0,.08)}
+.proj-img img{width:100%;height:100%;object-fit:cover;transition:transform .3s ease}
+.proj-img:hover img{transform:translateZ(30px) scale(1.02)}
+.proj-arrow{position:absolute;bottom:14px;right:14px;width:40px;height:40px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.08);cursor:pointer;transition:transform .3s ease}
+.proj-img:hover .proj-arrow{transform:translateZ(40px)}
+.proj-arrow svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2;transform:rotate(-45deg)}
+
+/* ===== AI ===== */
+.sec-ai{background:var(--bg);padding:120px 0}
+.ai-wrap{max-width:1400px;margin:0 auto;padding:0 clamp(20px,3vw,60px);display:flex;gap:clamp(40px,5vw,80px);align-items:flex-start}
+.ai-l{flex:0 0 30%;max-width:391px;display:flex;flex-direction:column;gap:24px}
+.ai-tag{padding:3px 8px;background:var(--gray);border-radius:4px;display:inline-flex;width:fit-content}
+.ai-tag span{font-size:16px;line-height:1.31}
+.ai-title{font-weight:600;font-size:clamp(20px,1.6vw,30px);line-height:1.4}
+.ai-desc{font-weight:300;font-size:16px;line-height:1.625;color:var(--sub)}
+.ai-r{flex:1;display:flex;gap:clamp(16px,2.5vw,40px)}
+.ai-card{flex:1;display:flex;flex-direction:column;gap:16px}
+.ai-card-img-wrap{width:100%;perspective:1000px}
+.ai-card-img{width:100%;aspect-ratio:233/200;border-radius:18px;overflow:hidden;background:#F0F2F3;transition:transform .3s ease,box-shadow .3s ease;transform-style:preserve-3d;will-change:transform}
+.ai-card-img:hover{box-shadow:0 20px 40px rgba(0,0,0,.12),0 8px 16px rgba(0,0,0,.08)}
+.ai-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .3s ease}
+.ai-card-img:hover img{transform:translateZ(30px) scale(1.02)}
+.ai-card h4{font-weight:500;font-size:16px;line-height:1.4}
+.ai-card p{font-weight:300;font-size:12px;line-height:1.5;color:var(--sub)}
+
+/* ===== 3D ===== */
+.sec-3d{background:#fff;padding:120px 0}
+.td-wrap{max-width:1400px;margin:0 auto;padding:0 clamp(20px,3vw,60px);display:flex;flex-direction:column;gap:80px}
+.td-head{display:flex;justify-content:space-between;align-items:flex-start;gap:24px}
+.td-head-l{display:flex;flex-direction:column;gap:16px;flex-shrink:0}
+.td-head-desc{font-weight:300;font-size:16px;line-height:1.625;color:var(--sub);max-width:648px;text-align:right}
+.td-grid{display:flex;gap:12px;max-width:1400px;width:100%}
+.td-grid img{flex:1;min-width:0;aspect-ratio:1/1;object-fit:cover;border-radius:12px}
+
+/* ===== CONTACT ===== */
+.sec-contact{background:var(--bg);padding:120px 0;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;align-items:center;min-height:clamp(700px,62.5vw,1200px)}
+.contact-bg{position:absolute;left:0;right:0;top:138px;height:clamp(560px,56.25vw,1080px);z-index:0;pointer-events:none;display:flex;justify-content:center;align-items:center}
+.contact-bg canvas{width:100%!important;height:100%!important;display:block;pointer-events:auto}
+.contact-top{max-width:1400px;width:100%;padding:0 clamp(20px,3vw,60px);display:flex;justify-content:space-between;align-items:flex-start;gap:clamp(40px,8.7vw,167px);position:relative;z-index:1}
+.contact-titles{display:flex;flex-direction:column;gap:8px}
+.contact-resume{padding:18px 26px;background:var(--purple-light);border-radius:999px;display:flex;align-items:center;gap:18px;white-space:nowrap}
+.contact-resume-tag{padding:2px 8px 4px;background:var(--pink-warm);border-radius:2px;font-weight:500;font-size:16px}
+.contact-resume-text{font-weight:500;font-size:20px}
+.contact-bottom{max-width:1400px;width:100%;padding:0 clamp(20px,3vw,60px);display:flex;justify-content:space-between;align-items:flex-end;gap:40px;position:relative;z-index:1}
+.contact-card{padding:20px;background:var(--pink);border-radius:14px;display:flex;flex-direction:column;gap:16px}
+.contact-row{display:flex;align-items:center;gap:12px}
+.contact-label{padding:4px 12px;background:var(--tag-bg);border-radius:6px;font-weight:500;font-size:14px}
+.contact-val{font-weight:500;font-size:14px}
+.contact-val.lo{text-transform:lowercase}
+
+/* ===== FOOTER ===== */
+.footer{background:var(--footer-bg);padding:160px 48px 24px;display:flex;flex-direction:column;align-items:center;gap:180px;position:relative}
+.footer-pills{display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:center}
+.pill-footer{padding:8px 28px 11px;border-radius:50px}
+.pill-footer .t{font-weight:500;font-size:clamp(20px,2.2vw,40px);letter-spacing:-0.07em}
+.footer-bot{width:100%;max-width:1400px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+.footer-brand{display:flex;align-items:center;gap:6px}
+.footer-brand span{font-size:17px;letter-spacing:-0.03em}
+.footer-wechat{display:flex;align-items:center;gap:10px}
+.footer-wechat-label{padding:5px 8px;background:var(--purple-light);border-radius:4px;font-size:14px}
+.footer-wechat-num{font-size:14px}
+.footer-qr-area{display:flex;align-items:center;gap:8px}
+.footer-qr-img{width:97px;height:97px;border-radius:6px;overflow:hidden;object-fit:cover}
+.footer-qr-text{font-size:17px;letter-spacing:-0.03em}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:1024px){
+  .intro-wrap{flex-direction:column}
+  .intro-l{justify-content:flex-start}
+  .ai-wrap{flex-direction:column}
+  .ai-l{max-width:100%}
+  .td-head{flex-direction:column}
+  .td-head-desc{text-align:left}
+  .proj-card{flex-direction:column}
+  .proj-img{width:100%;max-width:535px}
+  .contact-top{flex-direction:column}
+  .exp-item{flex-direction:column;align-items:flex-start}
+  .exp-item-top{flex-wrap:wrap}
+}
+@media(max-width:768px){
+  .nav{padding:12px 16px;flex-wrap:wrap;gap:8px;justify-content:center}
+  .nav-tabs{flex-wrap:wrap;justify-content:center}
+  .hero-pills .hero-row{flex-wrap:wrap;justify-content:center;gap:10px}
+  .pill-hero{padding:12px 22px 14px}
+  .ai-r{flex-direction:column}
+  .ai-card{max-width:100%}
+  .td-grid{flex-wrap:wrap}
+  .td-grid img{flex:1 1 calc(50% - 6px);min-width:140px;height:200px}
+  .sec-contact{min-height:auto;padding:60px 20px}
+  .contact-bg{top:60px;height:80vh}
+  .contact-bottom{flex-direction:column;align-items:flex-start}
+  .footer-bot{flex-direction:column;align-items:center;text-align:center;gap:24px}
+  .footer-qr-area{flex-direction:column;align-items:center}
+}
+section[id]{scroll-margin-top:70px}
+.fade-in{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-left">
+    <a href="#cover" class="nav-home"><svg viewBox="0 0 24 24"><path d="M3 12l9-9 9 9M5 10v10a1 1 0 001 1h3a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h3a1 1 0 001-1V10" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  </div>
+  <div class="nav-tabs">
+    <a href="#cover" class="nav-tab active pf"><span>封面</span></a>
+    <a href="#about" class="nav-tab sq pf"><span>个人简介</span></a>
+    <a href="#projects" class="nav-tab pf"><span>项目经验</span></a>
+    <a href="#contact" class="nav-tab sq pf"><span>来滴滴我吧!</span></a>
+  </div>
+  <div class="nav-right">
+    <svg class="nav-heart" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+    <svg class="nav-heart" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+    <svg class="nav-heart" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+    <svg class="nav-heart" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+    <svg class="nav-heart" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="cover">
+  <!-- Decorative stars -->
+  <img src="images/cursor-star.png" class="hero-stars" style="top:12%;left:18%;width:36px" alt="">
+  <img src="images/cursor-star.png" class="hero-stars" style="top:28%;right:10%;width:44px" alt="">
+  <img src="images/cursor-star.png" class="hero-stars" style="bottom:24%;left:7%;width:44px" alt="">
+  <img src="images/cursor-star.png" class="hero-stars" style="bottom:30%;right:4%;width:36px" alt="">
+  <!-- 3D Computer (Spline) -->
+  <div class="hero-spline" id="hero-spline"><canvas id="canvas3d"></canvas></div>
+  <!-- Decorative characters -->
+  <img src="images/char-deco-1-f1461d.png" class="hero-deco" style="top:16%;right:22%;width:60px" alt="">
+  <img src="images/char-deco-2-dfd616.png" class="hero-deco" style="bottom:42%;left:30%;width:54px" alt="">
+  <img src="images/char-deco-3-93820b.png" class="hero-deco" style="bottom:15%;right:16%;width:54px" alt="">
+  <img src="images/sticker-small.png" class="hero-deco" style="bottom:calc(15% + 40px);left:50%;width:38px" alt="">
+  <!-- Title pills -->
+  <div class="hero-pills">
+    <div class="hero-row" style="gap:24px">
+      <div class="pill pill-hero bg-pink"><span class="t">阿锤</span></div>
+      <span class="t-lg" style="font-weight:600;font-size:clamp(42px,4.8vw,86px)">的</span>
+      <div class="pill pill-hero sq bg-gray"><span class="t-lg" style="font-weight:600;font-size:clamp(42px,4.8vw,86px)">2026</span></div>
+    </div>
+    <div class="hero-row" style="gap:10px">
+      <div class="pill pill-hero bg-yellow" style="border-radius:166px"><span class="t-lg" style="font-weight:600;font-size:clamp(42px,4.8vw,86px)">UX</span></div>
+      <div class="pill pill-hero sq bg-gray"><span class="t-lg" style="font-weight:600;font-size:clamp(42px,4.8vw,86px)">Design</span></div>
+      <div class="pill pill-hero bg-purple"><span class="t">作品集</span></div>
+    </div>
+  </div>
+  <!-- Bottom bar -->
+  <div class="hero-bottom">
+    <div class="hero-brand">
+      <span class="badge bg-cream pf">A Chuichui</span>
+      <span class="pf">De UI Design -</span>
+      <span class="badge bg-gray-s pf">2025</span>
+    </div>
+    <span class="pf" style="font-size:15px;letter-spacing:-0.03em;text-align:right">@ Personal Design Portfolio</span>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="sec-intro" id="about">
+  <div class="intro-wrap">
+    <div class="intro-l">
+      <!-- Title -->
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div class="sec-title-row">
+          <div class="pill pill-sec rd bg-pink"><span class="t">简单来介绍一下</span></div>
+          <div class="pill pill-sec bg-gray"><span class="t">阿锤</span></div>
+        </div>
+        <div class="sec-title-row">
+          <div class="pill pill-sec bg-gray" style="border-radius:166px"><span class="t">会干嘛?</span></div>
+          <div class="pill pill-sec rd bg-yellow"><span class="t">干了啥?</span></div>
+          <div class="emoji-box"><img src="images/emoji-sticker-26d3f5.png" alt=""></div>
+        </div>
+      </div>
+      <div class="intro-cards">
+      <!-- Pink info card -->
+      <div class="info-card bg-pink fade-in">
+        <div class="info-row"><span class="info-tag">本名</span><span class="info-val">张彦琪</span></div>
+        <div class="info-row"><span class="info-tag">工作经验</span><span class="info-val">3年</span></div>
+        <div class="info-row"><span class="info-tag">base</span><span class="info-val">深圳</span></div>
+        <div class="info-row"><span class="info-tag">院校</span><div class="info-val-group"><span class="info-val">深圳大学</span><span class="info-val">全日制本科</span></div></div>
+        <div class="info-row"><span class="info-tag">获奖</span><div class="info-val-group"><span class="info-val">全国奖项 * 3</span><span class="info-val">省内奖项 * 3</span></div></div>
+        <div class="info-row"><span class="info-tag">生日</span><span class="info-val">2000.8.4</span></div>
+      </div>
+      <!-- Yellow skills card -->
+      <div class="info-card bg-yellow fade-in">
+        <div class="skill-tags">
+          <span class="skill-tag">UI</span>
+          <span class="skill-tag sq">to b</span>
+          <span class="skill-tag">to c</span>
+          <span class="skill-tag sq">官网</span>
+          <span class="skill-tag">平面</span>
+        </div>
+        <div class="info-row">
+          <span class="info-tag">技能点</span>
+          <div class="skill-icons">
+            <div class="s-icon"><img src="images/icon-figma-56586a.png" alt="Figma"></div>
+            <div class="s-icon"><img src="images/icon-tool-2.png" alt=""></div>
+            <div class="s-icon"><img src="images/icon-tool-3-60ca11.png" alt=""></div>
+            <div class="s-icon"><img src="images/icon-sketch-56586a.png" alt="Sketch"></div>
+            <div class="s-icon"><img src="images/icon-modao-41e4ce.png" alt="墨刀"></div>
+            <div class="s-icon"><img src="images/icon-tool-6.png" alt=""></div>
+            <div class="s-icon"><img src="images/icon-tool-7.png" alt=""></div>
+            <div class="s-icon"><img src="images/icon-tool-8.png" alt=""></div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <!-- Experience -->
+    <div class="intro-r">
+      <div class="exp-head">
+        <div class="exp-badge"><span class="pf">EXPERIENCE</span></div>
+        <div class="exp-title-pill"><span>工作经历</span></div>
+        <div class="exp-dot"></div>
+      </div>
+      <div class="exp-list">
+        <div class="exp-item fade-in">
+          <div class="exp-item-top">
+            <div class="exp-company"><img src="images/logo-shanjian-4e1708.png" class="exp-logo" alt=""><span class="exp-name">闪剪智能有限公司</span></div>
+            <div class="exp-tags"><span class="exp-tag">APP</span><span class="exp-tag">WEB</span><span class="exp-tag">PC</span></div>
+          </div>
+          <p class="exp-desc">2023.03 - 至今（2.5 年）
+高级UI设计师
+独自负责闪剪 app & web、Bocalive、Bocalive Affiliate等项目</p>
+        </div>
+        <div class="exp-item fade-in">
+          <div class="exp-item-top">
+            <div class="exp-company"><img src="images/logo-bud-23d8c3.png" class="exp-logo" alt=""><span class="exp-name">深圳零点一娱乐有限公司</span></div>
+            <div class="exp-tags"><span class="exp-tag">APP</span><span class="exp-tag">WEB</span></div>
+          </div>
+          <p class="exp-desc">2022.05 - 2023.02 （10个月）
+职位 UX设计师/游戏UX设计师
+BUD app、BUD 官网设计</p>
+        </div>
+        <div class="exp-item fade-in">
+          <div class="exp-item-top">
+            <div class="exp-company"><img src="images/logo-wanxing.png" class="exp-logo" alt=""><span class="exp-name">万兴科技</span></div>
+            <div class="exp-tags"><span class="exp-tag">PC</span></div>
+          </div>
+          <p class="exp-desc">2021.11 - 2022.5（7个月）
+UI设计师
+独自负责 WCC 创作学院、组件搭建&维护、墨刀官网维护</p>
+        </div>
+        <div class="exp-item fade-in">
+          <div class="exp-item-top">
+            <div class="exp-company"><img src="images/logo-baidu.png" class="exp-logo" alt=""><span class="exp-name">百度</span></div>
+            <div class="exp-tags"><span class="exp-tag">WEB</span></div>
+          </div>
+          <p class="exp-desc">2021.07  -  2021.11（5个月）
+UI设计师
+于国际化产品研发中心部门，参与国际化产品相关设计需求</p>
+        </div>
+        <div class="exp-item fade-in">
+          <div class="exp-item-top">
+            <div class="exp-company"><img src="images/logo-jindi-5aa596.png" class="exp-logo" alt=""><span class="exp-name">金地集团</span></div>
+            <div class="exp-tags"><span class="exp-tag">小程序</span></div>
+          </div>
+          <p class="exp-desc">2021.04 - 2021.07（3个月）
+UX设计师
+金房宝 & 金地线上售楼处</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="sec-proj" id="projects">
+  <div class="proj-wrap">
+    <div class="proj-title">
+      <img src="images/calendar-flag.png" alt="">
+      <span>「 项目经验 」</span>
+    </div>
+    <div class="proj-list">
+      <div class="proj-card fade-in">
+        <div class="proj-info">
+          <div class="proj-name-row"><h3 class="proj-name">闪剪 App</h3><span class="proj-badge">APP</span></div>
+          <p class="proj-desc">闪剪是一款 AI 数字人口播视频生成工具，提供个性化定制、自然动作捕捉、语音合成、一键成片等功能，帮助你轻松打造个人 IP 矩阵，提升影响力。</p>
+        </div>
+        <a href="https://works.meiye.art/G73B8c1f42136896" target="_blank" class="proj-img-wrap"><div class="proj-img" data-3d-card><img src="images/project-shanjian-app.png" alt=""><div class="proj-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
+      </div>
+      <div class="proj-card fade-in">
+        <div class="proj-info">
+          <div class="proj-name-row"><h3 class="proj-name">闪剪Web工作台</h3><span class="proj-badge">Web</span></div>
+          <p class="proj-desc">专业的AI生成工具，专注短视频工具与爆款玩法研发，Al 生成多个行业平台的爆款文案 / 输入文字，就可以生成口播视频。从此，告别繁琐的拍摄、剪辑、录制等流程。</p>
+        </div>
+        <a href="https://works.meiye.art/A2FAc3c_7281929D" target="_blank" class="proj-img-wrap"><div class="proj-img" data-3d-card><img src="images/project-shanjian-web.png" alt=""><div class="proj-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
+      </div>
+      <div class="proj-card fade-in">
+        <div class="proj-info">
+          <div class="proj-name-row"><h3 class="proj-name">Bocalive 海外官网</h3><span class="proj-badge">官网</span></div>
+          <p class="proj-desc">BocaLive 是排名第一的 AI 直播工具。AI 驱动的直播，AI 头像，提升您的业务增长。服务于所有直播平台，在所有平台上体验全天候 24 小时的 AI 直播。</p>
+        </div>
+        <a href="https://works.meiye.art/E470d7871610W3F5" target="_blank" class="proj-img-wrap"><div class="proj-img" data-3d-card><img src="images/project-bocalive-4a24fc.png" alt=""><div class="proj-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
+      </div>
+      <div class="proj-card fade-in">
+        <div class="proj-info">
+          <div class="proj-name-row"><h3 class="proj-name">Miuta 海外官网</h3><span class="proj-badge">官网</span></div>
+          <p class="proj-desc">Miuta 是一款具备多场景内容生成能力的 AI 智能工具，灵感、随记、谈话中的一句话，都能一键变成完整内容。你的想法从此不再停留在草稿，创意一键成型。</p>
+        </div>
+        <a href="https://works.meiye.art/YE1Ae13d1939FS1D" target="_blank" class="proj-img-wrap"><div class="proj-img" data-3d-card><img src="images/project-miuta-51392b.png" alt=""><div class="proj-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AI APPLICATION -->
+<section class="sec-ai">
+  <div class="ai-wrap">
+    <div class="ai-l">
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div class="ai-tag"><span class="pf">AI Application</span></div>
+        <h2 class="ai-title">AI 能力的运用</h2>
+      </div>
+      <p class="ai-desc">优质AI作品仍依赖有审美与经验的设计师。AI虽抹平技术门槛，如何驾驭它突破效率与创意上限，仍是当代设计的核心课题。</p>
+    </div>
+    <div class="ai-r">
+      <div class="ai-card fade-in">
+        <a href="https://my.feishu.cn/wiki/TWOew3Svni1NkOkRYTDcIARwnab" target="_blank" class="ai-card-img-wrap"><div class="ai-card-img" data-3d-card><img src="images/ai-vibe-coding.png" alt=""></div></a>
+        <h4>Vibe Coding 能力</h4>
+        <p>用自然语言描述需求，AI 生成代码，而非手动逐行写代码。</p>
+      </div>
+      <div class="ai-card fade-in">
+        <a href="https://my.feishu.cn/wiki/VhnmwtDi2ilyRSkmh44cy6ZRnS4" target="_blank" class="ai-card-img-wrap"><div class="ai-card-img" data-3d-card><img src="images/ai-n8n.png" alt=""></div></a>
+        <h4>N8N 工作流搭建</h4>
+        <p>用可视化拖拽的方式，把各种逻辑串成自动化流程，实现业务自动化。</p>
+      </div>
+      <div class="ai-card fade-in">
+        <a href="https://my.feishu.cn/wiki/QmsEwh0U2iVCTBkQoLpcyESZnjh" target="_blank" class="ai-card-img-wrap"><div class="ai-card-img" data-3d-card><img src="images/ai-skills-5af01e.png" alt=""></div></a>
+        <h4>Skills 设计系统搭建</h4>
+        <p>使用skills搭建设计系统，打通设计规范和设计师与开发之间的互联。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3D VISUAL -->
+<section class="sec-3d">
+  <div class="td-wrap">
+    <div class="td-head">
+      <div class="td-head-l">
+        <div class="ai-tag"><span class="pf">3D Visual Ability</span></div>
+        <h2 class="ai-title">3D 视觉能力</h2>
+      </div>
+      <p class="td-head-desc">优质AI作品仍依赖有审美与经验的设计师。AI虽抹平技术门槛，如何驾驭它突破效率与创意上限，仍是当代设计的核心课题。</p>
+    </div>
+    <div class="td-grid">
+      <img src="images/3d-1.png" alt="" class="fade-in">
+      <img src="images/3d-2.png" alt="" class="fade-in">
+      <img src="images/3d-3.png" alt="" class="fade-in">
+      <img src="images/3d-4.png" alt="" class="fade-in">
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec-contact" id="contact">
+  <div class="contact-bg" id="contact-spline"><canvas id="canvas3d-contact"></canvas></div>
+  <div class="contact-top">
+    <div class="contact-titles">
+      <div class="sec-title-row">
+        <div class="pill pill-sec bg-gray"><span class="t">如果觉得</span></div>
+        <div class="pill pill-sec rd bg-pink"><span class="t">哎哟不错</span></div>
+        <div class="pill pill-sec bg-gray"><span class="t">哦 ~</span></div>
+      </div>
+      <div class="sec-title-row">
+        <div class="pill pill-sec bg-gray" style="border-radius:166px"><span class="t">那么可以联系</span></div>
+        <div class="pill pill-sec rd bg-gray"><span class="t">阿锤</span></div>
+        <div class="pill pill-sec bg-yellow"><span class="t">13680450660</span></div>
+      </div>
+    </div>
+    <div class="contact-resume">
+      <div class="contact-resume-tag">&gt;/</div>
+      <span class="contact-resume-text">阿锤的简历</span>
+    </div>
+  </div>
+  <div class="contact-bottom">
+    <div class="contact-card">
+      <div class="contact-row"><span class="contact-label">电话</span><span class="contact-val">13680450660</span></div>
+      <div class="contact-row"><span class="contact-label">微信号</span><span class="contact-val lo">cheicheicheichei</span></div>
+      <div class="contact-row"><span class="contact-label">邮箱</span><span class="contact-val lo">224611448768@qq.com</span></div>
+    </div>
+    <div class="hero-brand">
+      <span class="badge bg-cream pf">A Chuichui</span>
+      <span class="pf">De UI Design -</span>
+      <span class="badge bg-gray-s pf">2026</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-pills">
+    <div class="pill pill-footer bg-pink"><span class="t">非常感谢</span></div>
+    <div class="pill pill-footer" style="background:var(--bg);border-radius:0"><span class="t">你的</span></div>
+    <div class="pill pill-footer bg-yellow"><span class="t">耐心观看 !</span></div>
+  </div>
+  <div class="footer-bot">
+    <div class="footer-brand">
+      <span class="badge bg-purple-light pf" style="background:var(--purple-light)">a chuichui</span>
+      <span class="pf">de UX Design</span>
+    </div>
+    <div class="footer-wechat">
+      <span class="footer-wechat-label">可以加俺的微信哦!</span>
+      <span class="footer-wechat-num">13680450660</span>
+    </div>
+    <div class="footer-qr-area">
+      <img src="images/qrcode.png" class="footer-qr-img" alt="QR">
+      <span class="pf" style="font-size:17px;background:#fff;padding:6px 12px;border-radius:6px;letter-spacing:-0.03em">扫码滴滴我 </span>
+    </div>
+  </div>
+</footer>
+
+<script type="importmap">
+{"imports":{"@splinetool/runtime":"https://unpkg.com/@splinetool/runtime@1.12.73/build/runtime.js"}}
+</script>
+<script type="module">
+import { Application } from '@splinetool/runtime';
+try {
+  const canvas = document.getElementById('canvas3d');
+  const app = new Application(canvas);
+  await app.load('https://prod.spline.design/eijMhvoouWIJe2kj/scene.splinecode');
+} catch(e) { console.warn('Hero Spline load failed:', e); }
+try {
+  const canvas2 = document.getElementById('canvas3d-contact');
+  const app2 = new Application(canvas2);
+  await app2.load('https://prod.spline.design/TFY3AvvjYv2BmhBl/scene.splinecode');
+} catch(e) { console.warn('Contact Spline load failed:', e); }
+</script>
+<script>
+document.getElementById('canvas3d').addEventListener('wheel',function(e){
+  e.preventDefault();
+  window.scrollBy({top:e.deltaY,behavior:'auto'});
+},{passive:false});
+document.getElementById('canvas3d-contact').addEventListener('wheel',function(e){
+  e.preventDefault();
+  window.scrollBy({top:e.deltaY,behavior:'auto'});
+},{passive:false});
+const tabs=document.querySelectorAll('.nav-tab');
+const secs=document.querySelectorAll('section[id]');
+tabs.forEach(t=>t.addEventListener('click',()=>{tabs.forEach(x=>x.classList.remove('active'));t.classList.add('active')}));
+const so=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){const id=e.target.id;tabs.forEach(t=>t.classList.toggle('active',t.getAttribute('href')==='#'+id))}})},{threshold:.3,rootMargin:'-70px 0px 0px 0px'});
+secs.forEach(s=>so.observe(s));
+const fo=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:.08});
+document.querySelectorAll('.fade-in').forEach(el=>fo.observe(el));
+document.querySelectorAll('[data-3d-card]').forEach(card=>{
+  const wrap=card.parentElement;
+  wrap.addEventListener('mousemove',e=>{
+    const r=wrap.getBoundingClientRect();
+    const x=(e.clientX-r.left)/r.width;
+    const y=(e.clientY-r.top)/r.height;
+    const rotY=(x-.5)*20;
+    const rotX=(y-.5)*-20;
+    card.style.transform=`rotateY(${rotY}deg) rotateX(${rotX}deg)`;
+  });
+  wrap.addEventListener('mouseleave',()=>{
+    card.style.transform='rotateY(0) rotateX(0)';
+  });
+});
+</script>
+</body>
+</html>

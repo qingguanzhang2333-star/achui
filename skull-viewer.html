@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D 骷髅模型</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      overflow: hidden;
+      background: #0a0a0a;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+    }
+    canvas { display: block; }
+    #loading {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #0a0a0a;
+      z-index: 100;
+      transition: opacity 0.6s ease;
+    }
+    #loading.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+    .spinner {
+      width: 48px;
+      height: 48px;
+      border: 3px solid rgba(255,255,255,0.1);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    #loading p {
+      margin-top: 16px;
+      color: rgba(255,255,255,0.6);
+      font-size: 14px;
+    }
+    #info {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(255,255,255,0.35);
+      font-size: 13px;
+      pointer-events: none;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+
+<div id="loading">
+  <div class="spinner"></div>
+  <p>加载模型中…</p>
+</div>
+
+<div id="info">拖拽旋转 · 滚轮缩放 · 右键平移</div>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+  }
+}
+</script>
+
+<script type="module">
+  import * as THREE from 'three';
+  import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+  import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
+  import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+  import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+  import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+  import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
+  import { RenderPixelatedPass } from 'three/addons/postprocessing/RenderPixelatedPass.js';
+
+  const scene = new THREE.Scene();
+
+  const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+  camera.position.set(0, 1, 3);
+
+  const renderer = new THREE.WebGLRenderer({ antialias: false, alpha: true });
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 1.3;
+  renderer.outputColorSpace = THREE.SRGBColorSpace;
+  document.body.appendChild(renderer.domElement);
+
+  // --- 灯光：低环境光 + 基础方向光 ---
+  const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+  scene.add(ambientLight);
+
+  const dirLight = new THREE.DirectionalLight(0xffffff, 2.0);
+  dirLight.position.set(5, 8, 5);
+  scene.add(dirLight);
+
+  const fillLight = new THREE.DirectionalLight(0x8888ff, 0.6);
+  fillLight.position.set(-5, 2, -5);
+  scene.add(fillLight);
+
+
+  // --- 控制器 ---
+  const controls = new OrbitControls(camera, renderer.domElement);
+  controls.enableDamping = true;
+  controls.dampingFactor = 0.06;
+  controls.autoRotate = true;
+  controls.autoRotateSpeed = 2.0;
+  controls.minDistance = 1;
+  controls.maxDistance = 20;
+  controls.target.set(0, 0.5, 0);
+
+  // --- 后处理管线 ---
+  const composer = new EffectComposer(renderer);
+
+  const renderPass = new RenderPass(scene, camera);
+  composer.addPass(renderPass);
+
+  const pixelPass = new RenderPixelatedPass(3, scene, camera);
+  pixelPass.normalEdgeStrength = 0.3;
+  pixelPass.depthEdgeStrength = 0.4;
+  composer.addPass(pixelPass);
+
+  const localGlitchShader = {
+    uniforms: {
+      tDiffuse:   { value: null },
+      time:       { value: 0.0 },
+      resolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) },
+      blockScale: { value: 15.0 },
+      seed:       { value: 0.0 }
+    },
+    vertexShader: `
+      varying vec2 vUv;
+      void main() {
+        vUv = uv;
+        gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+      }
+    `,
+    fragmentShader: `
+      uniform sampler2D tDiffuse;
+      uniform float time;
+      uniform vec2 resolution;
+      uniform float blockScale;
+      uniform float seed;
+      varying vec2 vUv;
+
+      float hash(vec2 p) {
+        return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453);
+      }
+
+      void main() {
+        vec4 orig = texture2D(tDiffuse, vUv);
+        float lum = dot(orig.rgb, vec3(0.299, 0.587, 0.114));
+
+        // only glitch where there's rendered content (the skull)
+        if (lum < 0.015) {
+          gl_FragColor = orig;
+          return;
+        }
+
+        // divide skull area into a grid of blockScale x blockScale cells
+        vec2 blockSize = vec2(1.0 / blockScale);
+        vec2 blockPos = floor(vUv / blockSize);
+        float blockId = hash(blockPos + vec2(seed));
+
+        // only ~12% of blocks glitch at any time, cycling rapidly
+        float trigger = step(0.88, hash(blockPos + vec2(floor(time * 6.0))));
+
+        vec2 uv = vUv;
+        float rgbAmt = 0.0;
+
+        if (trigger > 0.5) {
+          float dir = hash(blockPos + vec2(seed + 1.0)) > 0.5 ? 1.0 : -1.0;
+          float shiftX = dir * blockId * 0.025;
+          float shiftY = (hash(blockPos + vec2(seed + 2.0)) - 0.5) * 0.015;
+          uv += vec2(shiftX, shiftY);
+          rgbAmt = 0.006 * blockId;
+        }
+
+        // rgb split only inside glitched blocks
+        float r = texture2D(tDiffuse, uv + vec2(rgbAmt, 0.0)).r;
+        float g = texture2D(tDiffuse, uv).g;
+        float b = texture2D(tDiffuse, uv - vec2(rgbAmt, 0.0)).b;
+
+        gl_FragColor = vec4(r, g, b, orig.a);
+      }
+    `
+  };
+  const localGlitchPass = new ShaderPass(localGlitchShader);
+  composer.addPass(localGlitchPass);
+
+  const scanlineShader = {
+    uniforms: {
+      tDiffuse:  { value: null },
+      time:      { value: 0.0 },
+      intensity: { value: 0.06 }
+    },
+    vertexShader: `
+      varying vec2 vUv;
+      void main() {
+        vUv = uv;
+        gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+      }
+    `,
+    fragmentShader: `
+      uniform sampler2D tDiffuse;
+      uniform float time;
+      uniform float intensity;
+      varying vec2 vUv;
+      void main() {
+        vec4 color = texture2D(tDiffuse, vUv);
+        float lum = dot(color.rgb, vec3(0.299, 0.587, 0.114));
+        if (lum < 0.015) { gl_FragColor = color; return; }
+        float scanline = sin((vUv.y + time * 0.05) * 800.0) * intensity;
+        float flicker = 0.98 + 0.02 * sin(time * 12.0);
+        color.rgb = color.rgb - scanline;
+        color.rgb *= flicker;
+        gl_FragColor = color;
+      }
+    `
+  };
+  const scanlinePass = new ShaderPass(scanlineShader);
+  composer.addPass(scanlinePass);
+
+  // --- 鼠标 hover 金色材质 ---
+  const raycaster = new THREE.Raycaster();
+  const mouse = new THREE.Vector2(9999, 9999);
+  const hitPointTarget = new THREE.Vector3(0, -999, 0);
+  const hitPointSmooth = new THREE.Vector3(0, -999, 0);
+  let hitActive = 0.0;
+  let hitActiveSmooth = 0.0;
+  const GOLD_RADIUS = 0.15;
+
+
+  const goldUniforms = {
+    uHitPoint:  { value: hitPointSmooth },
+    uHitActive: { value: 0.0 },
+    uGoldRadius: { value: GOLD_RADIUS }
+  };
+
+  function injectGoldShader(material) {
+    material.onBeforeCompile = (shader) => {
+      shader.uniforms.uHitPoint  = goldUniforms.uHitPoint;
+      shader.uniforms.uHitActive = goldUniforms.uHitActive;
+      shader.uniforms.uGoldRadius = goldUniforms.uGoldRadius;
+
+      shader.vertexShader = shader.vertexShader.replace(
+        '#include <common>',
+        `#include <common>
+         varying vec3 vWorldPos;`
+      );
+      shader.vertexShader = shader.vertexShader.replace(
+        '#include <worldpos_vertex>',
+        `#include <worldpos_vertex>
+         vWorldPos = (modelMatrix * vec4(transformed, 1.0)).xyz;`
+      );
+
+      shader.fragmentShader = shader.fragmentShader.replace(
+        '#include <common>',
+        `#include <common>
+         uniform vec3 uHitPoint;
+         uniform float uHitActive;
+         uniform float uGoldRadius;
+         varying vec3 vWorldPos;`
+      );
+      shader.fragmentShader = shader.fragmentShader.replace(
+        '#include <dithering_fragment>',
+        `#include <dithering_fragment>
+         float dHit = distance(vWorldPos, uHitPoint);
+         float goldMask = uHitActive * smoothstep(uGoldRadius, uGoldRadius * 0.2, dHit);
+         vec3 goldColor = vec3(1.0, 0.84, 0.0);
+         vec3 goldSpecular = vec3(1.0, 0.95, 0.6);
+         float fresnel = pow(1.0 - max(dot(normalize(vWorldPos - cameraPosition), normalize(vNormal)), 0.0), 3.0);
+         vec3 goldSurface = mix(goldColor * 0.7, goldSpecular, fresnel * 0.6);
+         gl_FragColor.rgb = mix(gl_FragColor.rgb, goldSurface, goldMask);
+         gl_FragColor.rgb += goldMask * goldSpecular * 0.08;`
+      );
+    };
+    material.needsUpdate = true;
+  }
+
+  window.addEventListener('mousemove', (e) => {
+    mouse.x =  (e.clientX / window.innerWidth)  * 2 - 1;
+    mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
+  });
+  window.addEventListener('mouseleave', () => {
+    mouse.set(9999, 9999);
+  });
+
+  // --- 加载模型 ---
+  const dracoLoader = new DRACOLoader();
+  dracoLoader.setDecoderPath('https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/libs/draco/');
+
+  const loader = new GLTFLoader();
+  loader.setDRACOLoader(dracoLoader);
+
+  let model = null;
+
+  loader.load(
+    './skull.glb',
+    (gltf) => {
+      model = gltf.scene;
+
+      const box = new THREE.Box3().setFromObject(model);
+      const center = box.getCenter(new THREE.Vector3());
+      const size = box.getSize(new THREE.Vector3());
+
+      model.position.sub(center);
+
+      const maxDim = Math.max(size.x, size.y, size.z);
+      const scale = 1.2 / maxDim;
+      model.scale.setScalar(scale);
+
+      model.traverse((child) => {
+        if (child.isMesh) {
+          if (Array.isArray(child.material)) {
+            child.material.forEach(injectGoldShader);
+          } else {
+            injectGoldShader(child.material);
+          }
+        }
+      });
+
+      scene.add(model);
+
+      const dist = 4;
+      camera.position.set(0, 0.3, dist);
+      controls.target.set(0, 0, 0);
+      controls.update();
+
+      document.getElementById('loading').classList.add('hidden');
+    },
+    (progress) => {
+      if (progress.total) {
+        const pct = Math.round((progress.loaded / progress.total) * 100);
+        document.querySelector('#loading p').textContent = `加载模型中… ${pct}%`;
+      }
+    },
+    (error) => {
+      console.error('模型加载失败:', error);
+      document.querySelector('#loading p').textContent = '模型加载失败，请检查文件路径';
+    }
+  );
+
+  // --- resize ---
+  window.addEventListener('resize', () => {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    composer.setSize(window.innerWidth, window.innerHeight);
+    localGlitchPass.uniforms.resolution.value.set(window.innerWidth, window.innerHeight);
+  });
+
+  // --- 动画循环 ---
+  const clock = new THREE.Clock();
+
+  function animate() {
+    requestAnimationFrame(animate);
+    const t = clock.getElapsedTime();
+
+    controls.update();
+
+    // --- 鼠标 hover 金色 raycasting ---
+    if (model) {
+      raycaster.setFromCamera(mouse, camera);
+      const hits = raycaster.intersectObject(model, true);
+      if (hits.length > 0) {
+        hitPointTarget.copy(hits[0].point);
+        hitActive = 1.0;
+      } else {
+        hitActive = 0.0;
+      }
+    }
+    hitActiveSmooth += (hitActive - hitActiveSmooth) * 0.12;
+    hitPointSmooth.lerp(hitPointTarget, 0.15);
+    goldUniforms.uHitActive.value = hitActiveSmooth;
+    goldUniforms.uHitPoint.value = hitPointSmooth;
+
+    localGlitchPass.uniforms.time.value = t;
+    localGlitchPass.uniforms.seed.value = Math.floor(t * 8.0);
+    scanlinePass.uniforms.time.value = t;
+
+    composer.render();
+  }
+  animate();
+</script>
+</body>
+</html>
