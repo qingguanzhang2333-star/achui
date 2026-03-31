@@ -131,7 +131,8 @@ a{text-decoration:none;color:inherit}
 .proj-badge{padding:5px 14px;background:var(--badge-bg);border-radius:50px;font-weight:500;font-size:18px}
 .proj-desc{font-weight:300;font-size:clamp(15px,1.05vw,20px);line-height:1.7;color:var(--sub)}
 .proj-img-wrap{flex:0 0 auto;width:clamp(280px,38vw,535px);perspective:1000px}
-.proj-img{width:100%;aspect-ratio:535/331;border-radius:26px;overflow:hidden;background:#C3C3C3;position:relative;transition:transform .3s ease,box-shadow .3s ease;transform-style:preserve-3d;will-change:transform}
+.proj-img{width:100%;aspect-ratio:535/331;border-radius:26px;overflow:hidden;background:#C3C3C3;position:relative;transition:transform .3s ease,box-shadow .3s ease;transform-style:preserve-3d}
+.proj-img:hover{will-change:transform}
 .proj-img:hover{box-shadow:0 20px 40px rgba(0,0,0,.12),0 8px 16px rgba(0,0,0,.08)}
 .proj-img img{width:100%;height:100%;object-fit:cover;transition:transform .3s ease}
 .proj-img:hover img{transform:translateZ(30px) scale(1.02)}
@@ -150,7 +151,8 @@ a{text-decoration:none;color:inherit}
 .ai-r{flex:1;display:flex;gap:clamp(16px,2.5vw,40px)}
 .ai-card{flex:1;display:flex;flex-direction:column;gap:16px}
 .ai-card-img-wrap{width:100%;perspective:1000px}
-.ai-card-img{width:100%;aspect-ratio:233/200;border-radius:18px;overflow:hidden;background:#F0F2F3;transition:transform .3s ease,box-shadow .3s ease;transform-style:preserve-3d;will-change:transform}
+.ai-card-img{width:100%;aspect-ratio:233/200;border-radius:18px;overflow:hidden;background:#F0F2F3;transition:transform .3s ease,box-shadow .3s ease;transform-style:preserve-3d}
+.ai-card-img:hover{will-change:transform}
 .ai-card-img:hover{box-shadow:0 20px 40px rgba(0,0,0,.12),0 8px 16px rgba(0,0,0,.08)}
 .ai-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .3s ease}
 .ai-card-img:hover img{transform:translateZ(30px) scale(1.02)}
@@ -227,6 +229,7 @@ a{text-decoration:none;color:inherit}
   .footer-qr-area{flex-direction:column;align-items:center}
 }
 section[id]{scroll-margin-top:70px}
+.sec-proj,.sec-ai,.sec-3d,.sec-contact,.footer{content-visibility:auto;contain-intrinsic-size:auto 800px}
 .fade-in{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
 .fade-in.visible{opacity:1;transform:translateY(0)}
 </style>
@@ -304,7 +307,7 @@ section[id]{scroll-margin-top:70px}
         <div class="sec-title-row">
           <div class="pill pill-sec bg-gray" style="border-radius:166px"><span class="t">会干嘛?</span></div>
           <div class="pill pill-sec rd bg-yellow"><span class="t">干了啥?</span></div>
-          <div class="emoji-box"><img src="images/emoji-sticker-26d3f5.png" alt=""></div>
+          <div class="emoji-box"><img src="images/emoji-sticker-26d3f5.png" alt="" loading="lazy" decoding="async"></div>
         </div>
       </div>
       <div class="intro-cards">
@@ -329,14 +332,14 @@ section[id]{scroll-margin-top:70px}
         <div class="info-row">
           <span class="info-tag">技能点</span>
           <div class="skill-icons">
-            <div class="s-icon"><img src="images/icon-figma-56586a.png" alt="Figma"></div>
-            <div class="s-icon"><img src="images/icon-tool-2.png" alt=""></div>
-            <div class="s-icon"><img src="images/icon-tool-3-60ca11.png" alt=""></div>
-            <div class="s-icon"><img src="images/icon-sketch-56586a.png" alt="Sketch"></div>
-            <div class="s-icon"><img src="images/icon-modao-41e4ce.png" alt="墨刀"></div>
-            <div class="s-icon"><img src="images/icon-tool-6.png" alt=""></div>
-            <div class="s-icon"><img src="images/icon-tool-7.png" alt=""></div>
-            <div class="s-icon"><img src="images/icon-tool-8.png" alt=""></div>
+            <div class="s-icon"><img src="images/icon-figma-56586a.png" alt="Figma" loading="lazy" decoding="async"></div>
+            <div class="s-icon"><img src="images/icon-tool-2.png" alt="" loading="lazy" decoding="async"></div>
+            <div class="s-icon"><img src="images/icon-tool-3-60ca11.png" alt="" loading="lazy" decoding="async"></div>
+            <div class="s-icon"><img src="images/icon-sketch-56586a.png" alt="Sketch" loading="lazy" decoding="async"></div>
+            <div class="s-icon"><img src="images/icon-modao-41e4ce.png" alt="墨刀" loading="lazy" decoding="async"></div>
+            <div class="s-icon"><img src="images/icon-tool-6.png" alt="" loading="lazy" decoding="async"></div>
+            <div class="s-icon"><img src="images/icon-tool-7.png" alt="" loading="lazy" decoding="async"></div>
+            <div class="s-icon"><img src="images/icon-tool-8.png" alt="" loading="lazy" decoding="async"></div>
           </div>
         </div>
       </div>
@@ -405,7 +408,7 @@ UX设计师
 <section class="sec-proj" id="projects">
   <div class="proj-wrap">
     <div class="proj-title">
-      <img src="images/calendar-flag.png" alt="">
+      <img src="images/calendar-flag.png" alt="" loading="lazy" decoding="async">
       <span>「 项目经验 」</span>
     </div>
     <div class="proj-list">
@@ -414,28 +417,28 @@ UX设计师
           <div class="proj-name-row"><h3 class="proj-name">闪剪 App</h3><span class="proj-badge">APP</span></div>
           <p class="proj-desc">闪剪是一款 AI 数字人口播视频生成工具，提供个性化定制、自然动作捕捉、语音合成、一键成片等功能，帮助你轻松打造个人 IP 矩阵，提升影响力。</p>
         </div>
-        <a href="https://works.meiye.art/G73B8c1f42136896" target="_blank" class="proj-img-wrap"><div class="proj-img" data-3d-card><img src="images/project-shanjian-app.png" alt=""><div class="proj-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
+        <a href="https://works.meiye.art/G73B8c1f42136896" target="_blank" class="proj-img-wrap"><div class="proj-img" data-3d-card><img src="images/project-shanjian-app.png" alt="" loading="lazy" decoding="async"><div class="proj-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
       </div>
       <div class="proj-card fade-in">
         <div class="proj-info">
           <div class="proj-name-row"><h3 class="proj-name">闪剪Web工作台</h3><span class="proj-badge">Web</span></div>
           <p class="proj-desc">专业的AI生成工具，专注短视频工具与爆款玩法研发，Al 生成多个行业平台的爆款文案 / 输入文字，就可以生成口播视频。从此，告别繁琐的拍摄、剪辑、录制等流程。</p>
         </div>
-        <a href="https://works.meiye.art/A2FAc3c_7281929D" target="_blank" class="proj-img-wrap"><div class="proj-img" data-3d-card><img src="images/project-shanjian-web.png" alt=""><div class="proj-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
+        <a href="https://works.meiye.art/A2FAc3c_7281929D" target="_blank" class="proj-img-wrap"><div class="proj-img" data-3d-card><img src="images/project-shanjian-web.png" alt="" loading="lazy" decoding="async"><div class="proj-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
       </div>
       <div class="proj-card fade-in">
         <div class="proj-info">
           <div class="proj-name-row"><h3 class="proj-name">Bocalive 海外官网</h3><span class="proj-badge">官网</span></div>
           <p class="proj-desc">BocaLive 是排名第一的 AI 直播工具。AI 驱动的直播，AI 头像，提升您的业务增长。服务于所有直播平台，在所有平台上体验全天候 24 小时的 AI 直播。</p>
         </div>
-        <a href="https://works.meiye.art/E470d7871610W3F5" target="_blank" class="proj-img-wrap"><div class="proj-img" data-3d-card><img src="images/project-bocalive-4a24fc.png" alt=""><div class="proj-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
+        <a href="https://works.meiye.art/E470d7871610W3F5" target="_blank" class="proj-img-wrap"><div class="proj-img" data-3d-card><img src="images/project-bocalive-4a24fc.png" alt="" loading="lazy" decoding="async"><div class="proj-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
       </div>
       <div class="proj-card fade-in">
         <div class="proj-info">
           <div class="proj-name-row"><h3 class="proj-name">Miuta 海外官网</h3><span class="proj-badge">官网</span></div>
           <p class="proj-desc">Miuta 是一款具备多场景内容生成能力的 AI 智能工具，灵感、随记、谈话中的一句话，都能一键变成完整内容。你的想法从此不再停留在草稿，创意一键成型。</p>
         </div>
-        <a href="https://works.meiye.art/YE1Ae13d1939FS1D" target="_blank" class="proj-img-wrap"><div class="proj-img" data-3d-card><img src="images/project-miuta-51392b.png" alt=""><div class="proj-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
+        <a href="https://works.meiye.art/YE1Ae13d1939FS1D" target="_blank" class="proj-img-wrap"><div class="proj-img" data-3d-card><img src="images/project-miuta-51392b.png" alt="" loading="lazy" decoding="async"><div class="proj-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
       </div>
     </div>
   </div>
@@ -453,17 +456,17 @@ UX设计师
     </div>
     <div class="ai-r">
       <div class="ai-card fade-in">
-        <a href="https://my.feishu.cn/wiki/TWOew3Svni1NkOkRYTDcIARwnab" target="_blank" class="ai-card-img-wrap"><div class="ai-card-img" data-3d-card><img src="images/ai-vibe-coding.png" alt=""></div></a>
+        <a href="https://my.feishu.cn/wiki/TWOew3Svni1NkOkRYTDcIARwnab" target="_blank" class="ai-card-img-wrap"><div class="ai-card-img" data-3d-card><img src="images/ai-vibe-coding.png" alt="" loading="lazy" decoding="async"></div></a>
         <h4>Vibe Coding 能力</h4>
         <p>用自然语言描述需求，AI 生成代码，而非手动逐行写代码。</p>
       </div>
       <div class="ai-card fade-in">
-        <a href="https://my.feishu.cn/wiki/VhnmwtDi2ilyRSkmh44cy6ZRnS4" target="_blank" class="ai-card-img-wrap"><div class="ai-card-img" data-3d-card><img src="images/ai-n8n.png" alt=""></div></a>
+        <a href="https://my.feishu.cn/wiki/VhnmwtDi2ilyRSkmh44cy6ZRnS4" target="_blank" class="ai-card-img-wrap"><div class="ai-card-img" data-3d-card><img src="images/ai-n8n.png" alt="" loading="lazy" decoding="async"></div></a>
         <h4>N8N 工作流搭建</h4>
         <p>用可视化拖拽的方式，把各种逻辑串成自动化流程，实现业务自动化。</p>
       </div>
       <div class="ai-card fade-in">
-        <a href="https://my.feishu.cn/wiki/QmsEwh0U2iVCTBkQoLpcyESZnjh" target="_blank" class="ai-card-img-wrap"><div class="ai-card-img" data-3d-card><img src="images/ai-skills-5af01e.png" alt=""></div></a>
+        <a href="https://my.feishu.cn/wiki/QmsEwh0U2iVCTBkQoLpcyESZnjh" target="_blank" class="ai-card-img-wrap"><div class="ai-card-img" data-3d-card><img src="images/ai-skills-5af01e.png" alt="" loading="lazy" decoding="async"></div></a>
         <h4>Skills 设计系统搭建</h4>
         <p>使用skills搭建设计系统，打通设计规范和设计师与开发之间的互联。</p>
       </div>
@@ -482,10 +485,10 @@ UX设计师
       <p class="td-head-desc">优质AI作品仍依赖有审美与经验的设计师。AI虽抹平技术门槛，如何驾驭它突破效率与创意上限，仍是当代设计的核心课题。</p>
     </div>
     <div class="td-grid">
-      <img src="images/3d-1.png" alt="" class="fade-in">
-      <img src="images/3d-2.png" alt="" class="fade-in">
-      <img src="images/3d-3.png" alt="" class="fade-in">
-      <img src="images/3d-4.png" alt="" class="fade-in">
+      <img src="images/3d-1.png" alt="" loading="lazy" decoding="async" class="fade-in">
+      <img src="images/3d-2.png" alt="" loading="lazy" decoding="async" class="fade-in">
+      <img src="images/3d-3.png" alt="" loading="lazy" decoding="async" class="fade-in">
+      <img src="images/3d-4.png" alt="" loading="lazy" decoding="async" class="fade-in">
     </div>
   </div>
 </section>
@@ -558,11 +561,18 @@ try {
   const app = new Application(canvas);
   await app.load('https://prod.spline.design/eijMhvoouWIJe2kj/scene.splinecode');
 } catch(e) { console.warn('Hero Spline load failed:', e); }
-try {
-  const canvas2 = document.getElementById('canvas3d-contact');
-  const app2 = new Application(canvas2);
-  await app2.load('https://prod.spline.design/TFY3AvvjYv2BmhBl/scene.splinecode');
-} catch(e) { console.warn('Contact Spline load failed:', e); }
+const contactSection = document.getElementById('contact');
+const splineObs = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      splineObs.disconnect();
+      const canvas2 = document.getElementById('canvas3d-contact');
+      const app2 = new Application(canvas2);
+      app2.load('https://prod.spline.design/TFY3AvvjYv2BmhBl/scene.splinecode').catch(e => console.warn('Contact Spline:', e));
+    }
+  });
+}, { rootMargin: '200px' });
+if (contactSection) splineObs.observe(contactSection);
 </script>
 <script>
 document.getElementById('canvas3d').addEventListener('wheel',function(e){
