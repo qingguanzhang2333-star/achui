@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>阿锤的 2026 UX Design 作品集</title>
 <style>
+/* LOADER */
+.loader-overlay{position:fixed;inset:0;z-index:9999;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;transition:opacity .5s ease,visibility .5s ease}
+.loader-overlay.hidden{opacity:0;visibility:hidden;pointer-events:none}
+.loader-gif{width:80px;height:80px;object-fit:contain}
+.loader-bar-wrap{width:200px;height:4px;background:#E4E3E8;border-radius:4px;overflow:hidden}
+.loader-bar{height:100%;width:0%;background:var(--text,#1C2022);border-radius:4px;transition:width .3s ease}
+.loader-text{font-family:'HYPixel11px','HYPixel 11px',monospace;font-size:13px;color:#999;letter-spacing:0.05em}
+</style>
+<style>
 :root {
   --pink: #FFE0F9;
   --gray: rgba(224, 227, 231, 0.6);
@@ -28,6 +37,7 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:'PingFang SC',-apple-system,'Microsoft YaHei',sans-serif;color:var(--text);background:#fff;overflow-x:hidden}
+body:has(.loader-overlay:not(.hidden)){overflow:hidden}
 img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
 .pf{font-family:'HYPixel11px','HYPixel 11px','Press Start 2P',monospace;text-transform:capitalize}
@@ -235,6 +245,13 @@ section[id]{scroll-margin-top:70px}
 </style>
 </head>
 <body>
+
+<!-- LOADER -->
+<div class="loader-overlay" id="loader">
+  <img src="images/calendar-flag.png" class="loader-gif" alt="loading">
+  <div class="loader-bar-wrap"><div class="loader-bar" id="loader-bar"></div></div>
+  <span class="loader-text">LOADING...</span>
+</div>
 
 <!-- NAV -->
 <nav class="nav">
@@ -551,6 +568,35 @@ UX设计师
   </div>
 </footer>
 
+<script>
+(function(){
+  const bar=document.getElementById('loader-bar');
+  const overlay=document.getElementById('loader');
+  const imgs=[...document.images].filter(i=>!i.complete);
+  const total=Math.max(imgs.length,1);
+  let loaded=0,fakeProgress=0;
+  function update(){
+    const real=loaded/total*100;
+    const progress=Math.max(real,fakeProgress);
+    bar.style.width=Math.min(progress,100)+'%';
+    if(loaded>=imgs.length&&fakeProgress>=90){
+      bar.style.width='100%';
+      setTimeout(()=>{overlay.classList.add('hidden')},400);
+    }
+  }
+  imgs.forEach(img=>{
+    img.addEventListener('load',()=>{loaded++;update()});
+    img.addEventListener('error',()=>{loaded++;update()});
+  });
+  const fakeTimer=setInterval(()=>{
+    fakeProgress+=Math.random()*12+3;
+    if(fakeProgress>=90)clearInterval(fakeTimer);
+    update();
+  },200);
+  if(imgs.length===0){fakeProgress=90;update()}
+  window.addEventListener('load',()=>{loaded=total;fakeProgress=100;update()});
+})();
+</script>
 <script type="importmap">
 {"imports":{"@splinetool/runtime":"https://unpkg.com/@splinetool/runtime@1.12.73/build/runtime.js"}}
 </script>
